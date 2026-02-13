@@ -81,15 +81,13 @@ function ServiceSection({
   return (
     <section
       id={id}
-      className={`bg-gradient-to-b ${
-        reverse ? 'from-[#F9FBFF] to-[#EEF4FF]' : 'from-white to-[#F5F9FF]'
-      }`}
+      className={`bg-gradient-to-b ${reverse ? 'from-[#F9FBFF] to-[#EEF4FF]' : 'from-white to-[#F5F9FF]'
+        }`}
     >
       <div className="mx-auto flex max-w-6xl flex-col gap-10 px-4 py-24 md:px-6 lg:flex-row lg:items-center lg:gap-16 lg:px-8">
         <div
-          className={`flex-1 ${
-            reverse ? 'lg:order-2' : 'lg:order-1'
-          } space-y-4`}
+          className={`flex-1 ${reverse ? 'lg:order-2' : 'lg:order-1'
+            } space-y-4`}
         >
           <p className="text-xs font-semibold uppercase tracking-[0.25em] text-blue-600">
             {label}
@@ -118,9 +116,8 @@ function ServiceSection({
           </ul>
         </div>
         <div
-          className={`flex-1 ${
-            reverse ? 'lg:order-1' : 'lg:order-2'
-          }`}
+          className={`flex-1 ${reverse ? 'lg:order-1' : 'lg:order-2'
+            }`}
         >
           <AbstractPanel variant={panelVariant} />
         </div>
@@ -133,20 +130,20 @@ function Services() {
   return (
     <div className="min-h-screen bg-slate-50">
       {/* Hero */}
-      <section className="bg-gradient-to-br from-[#F8FAFC] via-[#EFF5FF] to-[#E4F1FF]">
-        <div className="mx-auto flex max-w-6xl flex-col gap-10 px-4 py-24 md:px-6 lg:flex-row lg:items-center lg:gap-16 lg:px-8">
+      <section className="bg-slate-950 pt-32 pb-24">
+        <div className="mx-auto flex max-w-6xl flex-col gap-10 px-4 md:px-6 lg:flex-row lg:items-center lg:gap-16 lg:px-8">
           <div className="max-w-xl space-y-5">
-            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-blue-600">
+            <p className="text-xs font-semibold uppercase tracking-[0.25em] text-blue-400">
               Services
             </p>
-            <h1 className="text-3xl font-semibold tracking-tight text-[#0B1F33] md:text-4xl lg:text-5xl">
+            <h1 className="text-3xl font-semibold tracking-tight text-white md:text-4xl lg:text-5xl">
               Our Services
             </h1>
-            <p className="text-base text-slate-700 sm:text-lg">
+            <p className="text-base text-slate-300 sm:text-lg">
               We help organizations design, build, and scale AI, data, and cloud
               systems that create measurable business impact.
             </p>
-            <p className="text-sm leading-relaxed text-slate-600 sm:text-[0.95rem]">
+            <p className="text-sm leading-relaxed text-slate-400 sm:text-[0.95rem]">
               At SageAlpha, we combine strategy, architecture, and engineering to
               move enterprises from experimentation to production-ready systems.
               Every engagement is grounded in clear outcomes, proven patterns, and

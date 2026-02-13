@@ -1,59 +1,79 @@
 function Footer() {
   return (
-    <footer
-      id="contact"
-      className="min-h-[320px] bg-gradient-to-b from-[#0B1F33] to-[#0A1725]"
-      aria-labelledby="footer-heading"
-    >
-      <div className="mx-auto flex min-h-[320px] max-w-6xl flex-col px-4 py-14 md:px-6 lg:px-8">
-        <div className="grid gap-10 md:grid-cols-2">
-          <div className="space-y-4">
-            <h2 id="footer-heading" className="text-lg font-semibold text-white">
-              SageAlpha
-            </h2>
-            <p className="max-w-md text-sm text-slate-300">
-              Customized AI, Data &amp; Cloud Solutions
+    <footer className="relative border-t border-slate-800 bg-[#020617] pt-20 pb-10 sm:pt-24 lg:pt-32">
+      {/* Glow Line */}
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-[1px] bg-gradient-to-r from-transparent via-blue-500 to-transparent opacity-50 shadow-[0_0_20px_rgba(59,130,246,0.6)]" />
+
+      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
+          <div>
+            <div className="flex items-center gap-2">
+              <span className="text-2xl font-bold text-white tracking-tight">SageAlpha</span>
+            </div>
+            <p className="mt-4 text-sm leading-6 text-slate-400 max-w-sm">
+              We build the systems that power the future. Enterprise AI, Data, and Cloud solutions engineering for scale, security, and impact.
             </p>
-            <p className="text-sm text-slate-300">
-              Email:{' '}
-              <a
-                href="mailto:sagealpha.ai@sagealpha.ai"
-                className="font-medium text-slate-200 transition hover:text-white"
-              >
-                sagealpha.ai@sagealpha.ai
-              </a>
-            </p>
-            <p className="max-w-md text-sm text-slate-300">
-              SNo 8 1A 1B Office No 110, Commerce Center Shiva, Pimpri Waghire,
-              <br />
-              Pune, Pune City, Maharashtra, India, 411017
-            </p>
+            <div className="mt-6 flex space-x-6">
+              {/* Socials placeholder */}
+            </div>
           </div>
 
-          <div className="md:text-right">
-            <nav className="flex flex-wrap gap-x-5 gap-y-3 text-sm text-slate-400 md:justify-end">
-              <a href="#services" className="transition hover:text-white">
-                Services
-              </a>
-              <a href="#case-studies" className="transition hover:text-white">
-                Case Studies
-              </a>
-              <a href="#whitepapers" className="transition hover:text-white">
-                Whitepapers
-              </a>
-              <a href="#careers" className="transition hover:text-white">
-                Careers
-              </a>
-              <a href="#contact" className="transition hover:text-white">
-                Contact
-              </a>
-            </nav>
+          <div className="grid grid-cols-2 gap-8 lg:col-span-2 sm:grid-cols-4">
+            <div>
+              <h3 className="text-sm font-semibold leading-6 text-white">Services</h3>
+              <ul className="mt-6 space-y-4">
+                {['Agentic AI', 'Data Platforms', 'Cloud Native', 'DevOps'].map((item) => (
+                  <li key={item}>
+                    <a href="#" className="text-sm leading-6 text-slate-400 hover:text-blue-400 transition-colors block relative group">
+                      {item}
+                      <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-500 transition-all duration-300 group-hover:w-full" />
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-sm font-semibold leading-6 text-white">Company</h3>
+              <ul className="mt-6 space-y-4">
+                {['About', 'Careers', 'Partners', 'Contact'].map((item) => (
+                  <li key={item}>
+                    <a href="#" className="text-sm leading-6 text-slate-400 hover:text-blue-400 transition-colors relative group inline-block">
+                      {item}
+                      <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-500 transition-all duration-300 group-hover:w-full" />
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div>
+              <h3 className="text-sm font-semibold leading-6 text-white">Legal</h3>
+              <ul className="mt-6 space-y-4">
+                {['Privacy', 'Terms', 'Security'].map((item) => (
+                  <li key={item}>
+                    <a href="#" className="text-sm leading-6 text-slate-400 hover:text-blue-400 transition-colors">
+                      {item}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="text-right sm:text-left">
+              <h3 className="text-sm font-semibold leading-6 text-white">Contact</h3>
+              <ul className="mt-6 space-y-4 text-sm text-slate-400">
+                <li>Pune, India</li>
+                <li>
+                  <a href="mailto:hello@sagealpha.ai" className="hover:text-blue-400 transition-colors">
+                    hello@sagealpha.ai
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
 
-        <div className="mt-12 border-t border-gray-700/40 pt-6">
-          <p className="text-xs text-slate-400">
-            © SageAlpha. All rights reserved.
+        <div className="mt-16 border-t border-slate-800 pt-8 sm:mt-20 lg:mt-24">
+          <p className="text-xs leading-5 text-slate-500">
+            &copy; {new Date().getFullYear()} SageAlpha. All rights reserved.
           </p>
         </div>
       </div>

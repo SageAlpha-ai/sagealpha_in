@@ -1,121 +1,212 @@
+import { motion } from 'framer-motion'
 import { Link } from 'react-router-dom'
+import { ArrowRight, ChevronRight, Activity, Database, Cloud, Layers } from 'lucide-react'
+
+const fadeUpVariants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: (i) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 1,
+      delay: 0.5 + i * 0.2,
+      ease: [0.25, 0.4, 0.25, 1],
+    },
+  }),
+}
 
 function HeroSection() {
   return (
-    <section
-      id="top"
-      aria-labelledby="hero-heading"
-      className="relative flex min-h-[calc(100vh-80px)] items-center overflow-hidden bg-gradient-to-br from-[#F8FAFC] via-[#F0F7FF] to-[#E6F0FA]"
-    >
-      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(30,58,138,0.14),_transparent_55%),radial-gradient(circle_at_bottom,_rgba(37,99,235,0.10),_transparent_55%)]" />
-      <div className="relative mx-auto w-full max-w-6xl px-4 py-16 md:px-6 lg:px-8">
-        <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
-          <div className="max-w-xl space-y-6">
-          <p className="text-sm font-semibold tracking-wide text-brand-accent">
-            Enterprise AI, Data &amp; Cloud Consulting
-          </p>
-          <h1
-            id="hero-heading"
-            className="text-balance text-3xl font-semibold tracking-tight text-[#0B1F33] sm:text-4xl lg:text-5xl"
+    <section className="relative flex min-h-screen w-full items-center justify-center overflow-hidden bg-slate-950 pt-20">
+      {/* Background Ambience */}
+      <div className="absolute inset-0 w-full h-full bg-[#020617] opacity-80 z-0" />
+
+      {/* Animated Gradient Orbs */}
+      <motion.div
+        animate={{
+          scale: [1, 1.2, 1],
+          opacity: [0.3, 0.5, 0.3],
+        }}
+        transition={{
+          duration: 8,
+          repeat: Infinity,
+          ease: "easeInOut"
+        }}
+        className="absolute -top-24 -left-24 w-96 h-96 bg-blue-600/20 rounded-full blur-[128px] pointer-events-none"
+      />
+      <motion.div
+        animate={{
+          scale: [1, 1.1, 1],
+          opacity: [0.2, 0.4, 0.2],
+        }}
+        transition={{
+          duration: 10,
+          repeat: Infinity,
+          ease: "easeInOut",
+          delay: 2
+        }}
+        className="absolute top-1/2 right-0 w-[500px] h-[500px] bg-indigo-500/10 rounded-full blur-[128px] pointer-events-none"
+      />
+
+      <div className="relative z-10 mx-auto grid max-w-7xl grid-cols-1 items-center gap-16 px-6 lg:grid-cols-2 lg:gap-24 lg:px-8">
+
+        {/* Left Content */}
+        <div className="max-w-2xl text-left">
+          <motion.div
+            custom={0}
+            variants={fadeUpVariants}
+            initial="hidden"
+            animate="visible"
+            className="inline-flex items-center gap-2 rounded-full border border-blue-500/20 bg-blue-500/10 px-3 py-1 text-sm font-medium text-blue-400 backdrop-blur-sm mb-6"
           >
-            Building Enterprise-Ready{" "}
-            
-            <span className="bg-gradient-to-r from-[#1E3A8A] via-[#2563EB] to-[#0EA5A4] bg-clip-text text-transparent">
-               AI, Data &amp; Cloud Solutions
+            <span className="flex h-2 w-2 relative">
+              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
             </span>
-          </h1>
-          <p className="text-pretty text-base text-slate-600 sm:text-lg">
-          From strategy to execution, we design and scale AI, data, and cloud solutions that actually deliver results.          </p>
-          <div className="flex flex-wrap gap-4">
+            Enterprise AI, Data & Cloud Consulting
+          </motion.div>
+
+          <motion.h1
+            custom={1}
+            variants={fadeUpVariants}
+            initial="hidden"
+            animate="visible"
+            className="text-5xl font-bold tracking-tight text-white sm:text-7xl leading-[1.1]"
+          >
+            Building Enterprise <br />
+            <span className="bg-gradient-to-r from-blue-400 via-indigo-400 to-sky-400 bg-clip-text text-transparent animate-shimmer bg-[length:200%_auto]">
+              Ready Solutions
+            </span>
+          </motion.h1>
+
+          <motion.p
+            custom={2}
+            variants={fadeUpVariants}
+            initial="hidden"
+            animate="visible"
+            className="mt-6 text-lg text-slate-400 leading-relaxed max-w-lg"
+          >
+            From strategy to execution, we design and scale AI, data, and cloud architectures that deliver measurable business impact.
+          </motion.p>
+
+          <motion.div
+            custom={3}
+            variants={fadeUpVariants}
+            initial="hidden"
+            animate="visible"
+            className="mt-10 flex flex-wrap gap-4"
+          >
             <a
               href="#contact"
-              className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-[#1E3A8A] to-[#2563EB] px-5 py-2.5 text-sm font-semibold text-white shadow-md transition-all duration-300 hover:opacity-95 hover:shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-soft focus-visible:ring-offset-2 focus-visible:ring-offset-slate-50"
+              className="group relative inline-flex items-center gap-2 rounded-full bg-blue-600 px-8 py-4 text-base font-semibold text-white shadow-lg transition-all hover:bg-blue-500 hover:scale-105 hover:shadow-blue-500/25 ring-offset-2 focus:ring-2 ring-blue-500"
             >
               Talk to an Expert
+              <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
             </a>
             <Link
               to="/services"
-              className="inline-flex items-center justify-center rounded-full border border-blue-600 bg-white/70 px-5 py-2.5 text-sm font-semibold text-blue-700 shadow-sm transition-all duration-300 hover:bg-gradient-to-r hover:from-[#F0F7FF] hover:to-[#E0EEFF] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-soft focus-visible:ring-offset-2 focus-visible:ring-offset-slate-50"
+              className="group inline-flex items-center gap-2 rounded-full border border-slate-700 bg-slate-900/50 px-8 py-4 text-base font-semibold text-white backdrop-blur-sm transition-all hover:bg-slate-800 hover:border-slate-600"
             >
-              Explore Our Services
+              Our Services
+              <ChevronRight className="h-4 w-4 text-slate-400 transition-transform group-hover:translate-x-1" />
             </Link>
-          </div>
-          <div className="mt-4 flex flex-wrap gap-x-10 gap-y-3 text-xs text-slate-500">
-            <div>
-              <p className="font-semibold text-slate-700">
-                Enterprise-grade delivery
-              </p>
-              <p>Architecture, security, and governance by design</p>
-            </div>
-            <div>
-              <p className="font-semibold text-slate-700">
-                Strategy through execution
-              </p>
-              <p>From roadmap to production systems</p>
-            </div>
-          </div>
-          </div>
+          </motion.div>
 
-          <div aria-hidden="true" className="relative">
-            <div className="pointer-events-none absolute -inset-10 -z-10 rounded-full bg-blue-400 blur-3xl opacity-20" />
-            <div className="relative rounded-3xl bg-panel-gradient p-[1px] shadow-soft-lg">
-          <div className="relative h-full w-full rounded-[1.4rem] bg-slate-900/95 p-6 sm:p-8">
-            <div className="absolute inset-0 rounded-[1.4rem] bg-[radial-gradient(circle_at_10%_20%,rgba(56,189,248,0.24),transparent_55%),radial-gradient(circle_at_80%_0,rgba(59,130,246,0.32),transparent_60%)] opacity-80" />
-            <div className="relative space-y-6 text-slate-100">
-              <p className="text-sm font-semibold text-sky-200">
-                Modern Enterprise Architecture
-              </p>
-              <div className="grid grid-cols-2 gap-4 text-xs sm:text-[0.8rem]">
-                <div className="rounded-2xl border border-slate-700/70 bg-slate-900/60 p-4 backdrop-blur">
-                  <p className="text-[0.7rem] font-medium uppercase tracking-wide text-slate-400">
-                    AI Layer
-                  </p>
-                  <p className="mt-1 font-semibold text-slate-50">
-                    LLMs &amp; Agentic Systems
-                  </p>
-                  <p className="mt-2 text-slate-400">
-                    Orchestrated agents, RAG, and copilots aligned to processes.
-                  </p>
+          <motion.div
+            custom={4}
+            variants={fadeUpVariants}
+            initial="hidden"
+            animate="visible"
+            className="mt-12 flex items-center gap-8 border-t border-slate-800 pt-8"
+          >
+            <div>
+              <p className="text-2xl font-bold text-white">98%</p>
+              <p className="text-sm text-slate-500">Success Rate</p>
+            </div>
+            <div>
+              <p className="text-2xl font-bold text-white">50+</p>
+              <p className="text-sm text-slate-500">Enterprise Clients</p>
+            </div>
+          </motion.div>
+        </div>
+
+        {/* Right Visual - Glassmorphic Card Stack */}
+        <motion.div
+          initial={{ opacity: 0, x: 50 }}
+          animate={{ opacity: 1, x: 0 }}
+          transition={{ duration: 1.2, ease: "easeOut", delay: 0.8 }}
+          className="relative hidden lg:block perspective-1000"
+        >
+          {/* Main Card */}
+          <motion.div
+            animate={{ y: [0, -15, 0] }}
+            transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+            className="relative z-20 rounded-3xl border border-slate-700/50 bg-slate-900/60 p-6 shadow-2xl backdrop-blur-xl"
+          >
+            <div className="flex items-center justify-between border-b border-slate-700/50 pb-4 mb-4">
+              <div className="flex items-center gap-3">
+                <div className="h-10 w-10 rounded-full bg-blue-500/20 flex items-center justify-center text-blue-400">
+                  <Activity className="h-5 w-5" />
                 </div>
-                <div className="rounded-2xl border border-slate-700/70 bg-slate-900/60 p-4 backdrop-blur">
-                  <p className="text-[0.7rem] font-medium uppercase tracking-wide text-slate-400">
-                    Data Fabric
-                  </p>
-                  <p className="mt-1 font-semibold text-slate-50">
-                    Trusted Analytics Foundation
-                  </p>
-                  <p className="mt-2 text-slate-400">
-                    Governed, discoverable, and analytics-ready data platforms.
-                  </p>
+                <div>
+                  <h3 className="font-semibold text-white">System Architecture</h3>
+                  <p className="text-xs text-slate-400">Live Monitoring</p>
                 </div>
-                <div className="rounded-2xl border border-slate-700/70 bg-slate-900/60 p-4 backdrop-blur">
-                  <p className="text-[0.7rem] font-medium uppercase tracking-wide text-slate-400">
-                    Cloud Platform
-                  </p>
-                  <p className="mt-1 font-semibold text-slate-50">
-                    Azure &amp; AWS Native
-                  </p>
-                  <p className="mt-2 text-slate-400">
-                    Secure, compliant, and cost-aware landing zones.
-                  </p>
+              </div>
+              <div className="flex gap-1.5">
+                <span className="h-2 w-2 rounded-full bg-red-500/50"></span>
+                <span className="h-2 w-2 rounded-full bg-yellow-500/50"></span>
+                <span className="h-2 w-2 rounded-full bg-green-500/50"></span>
+              </div>
+            </div>
+
+            <div className="space-y-4">
+              <div className="group rounded-xl bg-slate-800/50 p-4 transition-colors hover:bg-slate-800/80">
+                <div className="flex items-center gap-4">
+                  <div className="p-2 rounded-lg bg-indigo-500/20 text-indigo-400"><Database size={18} /></div>
+                  <div className="flex-1">
+                    <div className="h-2 w-24 rounded bg-slate-700 mb-2"></div>
+                    <div className="h-1.5 w-16 rounded bg-slate-700/50"></div>
+                  </div>
+                  <div className="text-xs text-green-400 font-mono">Active</div>
                 </div>
-                <div className="rounded-2xl border border-slate-700/70 bg-slate-900/60 p-4 backdrop-blur">
-                  <p className="text-[0.7rem] font-medium uppercase tracking-wide text-slate-400">
-                    Operating Model
-                  </p>
-                  <p className="mt-1 font-semibold text-slate-50">
-                    Programs that Scale
-                  </p>
-                  <p className="mt-2 text-slate-400">
-                    Ways of working that connect strategy, delivery, and change.
-                  </p>
+              </div>
+              <div className="group rounded-xl bg-slate-800/50 p-4 transition-colors hover:bg-slate-800/80">
+                <div className="flex items-center gap-4">
+                  <div className="p-2 rounded-lg bg-sky-500/20 text-sky-400"><Cloud size={18} /></div>
+                  <div className="flex-1">
+                    <div className="h-2 w-32 rounded bg-slate-700 mb-2"></div>
+                    <div className="h-1.5 w-20 rounded bg-slate-700/50"></div>
+                  </div>
+                  <div className="text-xs text-green-400 font-mono">Synced</div>
+                </div>
+              </div>
+              <div className="group rounded-xl bg-slate-800/50 p-4 transition-colors hover:bg-slate-800/80">
+                <div className="flex items-center gap-4">
+                  <div className="p-2 rounded-lg bg-purple-500/20 text-purple-400"><Layers size={18} /></div>
+                  <div className="flex-1">
+                    <div className="h-2 w-28 rounded bg-slate-700 mb-2"></div>
+                    <div className="h-1.5 w-12 rounded bg-slate-700/50"></div>
+                  </div>
+                  <div className="text-xs text-blue-400 font-mono">Deploying</div>
                 </div>
               </div>
             </div>
-          </div>
-            </div>
-          </div>
-        </div>
+
+            {/* Floating connecting line */}
+            <div className="absolute -right-6 -bottom-6 -z-10 h-64 w-64 rounded-full bg-blue-600/20 blur-[80px]" />
+          </motion.div>
+
+          {/* Background Card */}
+          <motion.div
+            animate={{ y: [0, -10, 0], rotate: [0, 2, 0] }}
+            transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+            className="absolute top-8 -right-12 z-10 w-full rounded-3xl border border-slate-700/30 bg-slate-800/40 p-6 backdrop-blur-md opacity-60"
+          >
+            <div className="h-32"></div>
+          </motion.div>
+        </motion.div>
+
       </div>
     </section>
   )

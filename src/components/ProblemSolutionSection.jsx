@@ -1,93 +1,101 @@
+import { motion } from 'framer-motion'
+import { AlertCircle, GitMerge, Trophy, ArrowRight } from 'lucide-react'
+
+const steps = [
+  {
+    id: 1,
+    title: 'The Challenge',
+    icon: AlertCircle,
+    color: 'text-red-500',
+    bg: 'bg-red-500/10',
+    description:
+      'Organizations invest heavily in AI/Data but often fail due to fragmented strategy, siloed data, and unscalable infrastructure, leading to stalled pilots.',
+  },
+  {
+    id: 2,
+    title: 'The SageAlpha Approach',
+    icon: GitMerge,
+    color: 'text-blue-500',
+    bg: 'bg-blue-500/10',
+    description:
+      'We bring a consulting-first execution model, aligning technical architecture with business goals. We treat AI not as a feature, but as a systemic capability.',
+  },
+  {
+    id: 3,
+    title: 'The Outcome',
+    icon: Trophy,
+    color: 'text-emerald-500',
+    bg: 'bg-emerald-500/10',
+    description:
+      'Enterprise-grade systems that are secure, governed, and scalable. You get measurable ROI and a future-proof foundation for continuous innovation.',
+  },
+]
+
 function ProblemSolutionSection() {
-  const items = [
-    {
-      title: 'The Challenge',
-      description:
-        'Many organizations invest in AI but fail due to lack of strategy, disjointed data, and computing systems that do not scale.',
-    },
-    {
-      title: 'The SageAlpha Approach',
-      description:
-        'A consulting-centric, execution-driven model that aligns AI initiatives with enterprise objectives and robust architecture.',
-    },
-    {
-      title: 'The Outcome',
-      description:
-        'Enterprise-ready AI programs that are secure, scalable, and provide measureable impact.',
-    },
-  ]
-
   return (
-    <section
-      aria-labelledby="problem-solution-heading"
-      className="bg-gradient-to-b from-[#F9FBFF] to-[#F1F7FF]"
-    >
-      <div className="mx-auto max-w-6xl px-4 py-20 md:px-6 lg:px-8 lg:py-24">
-        <div>
-          <header className="max-w-2xl">
-            <h2
-              id="problem-solution-heading"
-              className="text-xl font-semibold tracking-tight text-slate-900 sm:text-2xl"
-            >
-              From Problem to Outcomes
-            </h2>
-            
-          </header>
+    <section className="relative overflow-hidden bg-slate-950 py-24 sm:py-32">
+      {/* Background Gradients */}
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-blue-900/20 via-slate-950 to-slate-950" />
 
-          <div className="relative mt-10">
-            <div className="pointer-events-none absolute left-0 right-0 top-1/2 hidden -translate-y-1/2 md:block">
-              <div className="mx-auto h-px max-w-5xl bg-gradient-to-r from-transparent via-slate-300 to-transparent" />
-            </div>
+      <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
+        <div className="mx-auto max-w-2xl text-center mb-20">
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-3xl font-bold tracking-tight text-white sm:text-4xl"
+          >
+            From Friction to <span className="text-blue-500">Flow</span>
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
+            className="mt-4 text-lg leading-8 text-slate-400"
+          >
+            We bridge the gap between ambitious AI concepts and diverse, reliable operational reality.
+          </motion.p>
+        </div>
 
-            <div className="grid gap-6 md:grid-cols-3 md:items-stretch">
-              {items.map((item, index) => {
-                const isMiddle = index === 1
-                return (
-                  <article
-                    key={item.title}
-                      className={[
-                        'relative h-full rounded-2xl border p-6 shadow-sm transition',
-                        'hover:-translate-y-1 hover:shadow-lg',
-                        isMiddle
-                          ? 'border-blue-200 bg-gradient-to-br from-white to-[#F0F7FF] ring-1 ring-blue-100 shadow-[0_18px_45px_rgba(30,58,138,0.10)]'
-                          : 'border-slate-200 bg-white/80',
-                      ].join(' ')}
-                    >
-                      <div className="flex items-center justify-between gap-4">
-                        <p
-                          className={[
-                            'text-xs font-semibold uppercase tracking-wide',
-                            isMiddle ? 'text-brand-accent' : 'text-slate-600',
-                          ].join(' ')}
-                        >
-                          {item.title}
-                        </p>
-                        <span
-                          aria-hidden="true"
-                          className="hidden h-8 w-8 items-center justify-center rounded-full border border-slate-200 bg-white/80 text-xs font-semibold text-slate-500 md:flex"
-                        >
-                          {index + 1}
-                        </span>
-                      </div>
-                      <p className="mt-3 text-sm leading-relaxed text-slate-600 sm:text-[0.95rem]">
-                        {item.description}
-                      </p>
+        <div className="relative">
+          {/* Connecting Line (Desktop) */}
+          <div className="absolute top-12 left-0 w-full hidden lg:block">
+            <div className="absolute inset-0 top-1/2 h-0.5 w-full -translate-y-1/2 bg-slate-800" />
+            <motion.div
+              initial={{ scaleX: 0 }}
+              whileInView={{ scaleX: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1.5, ease: "easeInOut" }}
+              className="absolute inset-0 top-1/2 h-0.5 w-full -translate-y-1/2 bg-gradient-to-r from-red-500 via-blue-500 to-emerald-500 origin-left"
+            />
+          </div>
 
-                      {index < items.length - 1 && (
-                        <div
-                          aria-hidden="true"
-                          className="absolute -right-3 top-1/2 hidden -translate-y-1/2 md:block"
-                        >
-                          <div className="flex items-center">
-                            <div className="h-px w-6 bg-gradient-to-r from-slate-300 via-brand-accent/70 to-slate-300" />
-                            <div className="ml-1 h-1.5 w-1.5 rotate-45 border-r border-t border-brand-accent/80" />
-                          </div>
-                        </div>
-                      )}
-                    </article>
-                )
-              })}
-            </div>
+          <div className="grid gap-12 lg:grid-cols-3 relative">
+            {steps.map((step, index) => (
+              <motion.div
+                key={step.id}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: index * 0.3, duration: 0.8 }}
+                className="relative flex flex-col items-center text-center"
+              >
+                <div className={`relative z-10 flex h-24 w-24 items-center justify-center rounded-3xl border-4 border-slate-950 ${step.bg} shadow-2xl transition-transform duration-300 hover:scale-110 hover:rotate-3`}>
+                  <step.icon className={`h-10 w-10 ${step.color}`} />
+                </div>
+
+                <div className="mt-8 relative z-10 bg-slate-900/50 backdrop-blur-sm p-6 rounded-2xl border border-slate-800 hover:border-slate-700 transition-colors">
+                  <h3 className="text-xl font-bold text-white mb-3 flex items-center justify-center gap-2">
+                    <span className="text-sm font-light text-slate-500 opacity-50">0{step.id}.</span>
+                    {step.title}
+                  </h3>
+                  <p className="text-slate-400 leading-relaxed text-sm">
+                    {step.description}
+                  </p>
+                </div>
+              </motion.div>
+            ))}
           </div>
         </div>
       </div>

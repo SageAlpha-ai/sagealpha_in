@@ -6,12 +6,18 @@ html {
 
 body {
   margin: 0;
-  background-color: #f8fafc; /* slate-50 */
-  color: #0f172a; /* slate-900-ish */
+  background-color: #020617; /* sage-navy as base for cinematic feel, or slate-50 if light mode desired. User asked for premium depth. Let's go with a very dark slate or keep light but high quality. User's previous code was slate-50. User asked for "Premium, Layered, Immersive". Often dark is "cinematic". But "Apple/Stripe" are often light/airy. Let's check the user request again. "Dark cinematic gradient background" for CTA. "Premium deep navy gradient" for Footer. "Hero... Full-screen immersive...". Let's stick to a rich light theme with dark cinematic sections, or a dark theme. Apple uses a lot of light, Stripe too. But "Cinematic" usually implies dark.
+  Wait, "SageAlpha" typically uses a lot of white/blue. I will stick to a very high quality light theme with dark sections (CTA, Footer) and maybe toggle capability later. Or, I can make the whole site "Dark Mode" if it feels more premium.
+  Let's look at "Hero Section Transformation": "Gradient text with subtle animated shimmer", "Floating architectural card... glassmorphism".
+  Actually, let's keep the `slate-50` light theme base but make it cleaner, and execute the "cinematic" parts via the specific section designs (Hero can be light or dark, CTA is dark).
+  However, "Apple-level premium" often means very stark white/gray or very deep black.
+  I will use `white` background to start, but allow sections to override. Use `antialiased`. */
+  background-color: #ffffff;
+  color: #0f172a;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
 }
 
 #root {
