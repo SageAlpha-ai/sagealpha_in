@@ -1,8 +1,8 @@
 import HeroSection from '../components/HeroSection'
 import CredibilitySection from '../components/CredibilitySection'
-import ProblemSolutionSection from '../components/ProblemSolutionSection'
+import ExecutionFrameworkSection from '../components/ExecutionFrameworkSection'
 import ServicesPreviewSection from '../components/ServicesPreviewSection'
-import TechnologySection from '../components/TechnologySection'
+import IndustriesSection from '../components/IndustriesSection'
 import CaseStudiesSection from '../components/CaseStudiesSection'
 import WhitepapersSection from '../components/WhitepapersSection'
 import CareersSection from '../components/CareersSection'
@@ -14,16 +14,18 @@ function Home() {
   return (
     <>
       <HeroSection />
-      <CredibilitySection />
-      <ProblemSolutionSection />
-      <ServicesPreviewSection />
-      <TechnologySection />
-      <CaseStudiesSection />
-      <WhitepapersSection />
-      <CareersSection />
-      <PartnershipsSection />
-      <PartnersSection />
-      <FinalCTASection />
+      <div className="bg-gradient-to-b from-[#F5F9FF] via-[#F8FBFF] to-[#EEF6FF]">
+        <CredibilitySection />
+        <ExecutionFrameworkSection />
+        <ServicesPreviewSection />
+        <IndustriesSection />
+        <CaseStudiesSection />
+        <WhitepapersSection />
+        <CareersSection />
+        <PartnershipsSection />
+        <PartnersSection />
+        <FinalCTASection />
+      </div>
     </>
   )
 }

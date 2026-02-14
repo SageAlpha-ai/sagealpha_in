@@ -1,21 +1,29 @@
 import { motion } from 'framer-motion'
-import { ArrowRight, MessageSquare, Calendar } from 'lucide-react'
+import { ArrowRight, Calendar } from 'lucide-react'
 
 function FinalCTASection() {
   return (
-    <section className="relative overflow-hidden bg-slate-950 py-32 sm:py-40">
-      {/* Cinematic Background */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-blue-900/40 via-slate-950 to-slate-950" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-indigo-900/40 via-slate-950 to-slate-950" />
+    <section className="relative overflow-hidden py-32 sm:py-40 bg-[#0B1221]">
+      {/* Premium Background Layers */}
+      <div className="absolute inset-0">
+        {/* Deep mesh gradient base */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,_var(--tw-gradient-stops))] from-blue-900/40 via-[#0B1221] to-[#0B1221]" />
 
-      {/* Animated Particles/Glow */}
-      <motion.div
-        animate={{ opacity: [0.4, 0.7, 0.4], scale: [1, 1.2, 1] }}
-        transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-blue-500/10 rounded-full blur-[120px] pointer-events-none"
-      />
+        {/* Subtle bottom glow */}
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-[500px] bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-blue-600/20 via-transparent to-transparent opacity-60" />
 
-      <div className="relative mx-auto max-w-7xl px-6 lg:px-8 text-center">
+        {/* Animated accent orb */}
+        <motion.div
+          animate={{
+            opacity: [0.3, 0.5, 0.3],
+            scale: [1, 1.2, 1],
+          }}
+          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+          className="absolute top-0 right-0 -translate-y-1/4 translate-x-1/4 w-[800px] h-[800px] bg-indigo-600/20 rounded-full blur-[120px] pointer-events-none"
+        />
+      </div>
+
+      <div className="relative mx-auto max-w-7xl px-6 lg:px-8 text-center z-10">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -25,7 +33,7 @@ function FinalCTASection() {
           <h2 className="text-4xl font-bold tracking-tight text-white sm:text-6xl mb-6">
             Ready to <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400">Transform</span> Your Business?
           </h2>
-          <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-slate-400">
+          <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-slate-300">
             Join the fleet of forward-thinking enterprises building their future with SageAlpha today.
           </p>
 
@@ -34,13 +42,10 @@ function FinalCTASection() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               href="#contact"
-              className="group relative inline-flex items-center gap-2 rounded-full bg-white px-8 py-4 text-base font-semibold text-slate-900 shadow-2xl shadow-blue-500/20 transition-all hover:bg-blue-50 hover:text-blue-700"
+              className="group relative inline-flex items-center gap-2 rounded-full bg-blue-600 px-8 py-4 text-base font-semibold text-white shadow-xl shadow-blue-500/30 transition-all hover:bg-blue-500 hover:shadow-2xl hover:shadow-blue-500/40"
             >
               Start Your Project
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-
-              {/* Button Glow Effect */}
-              <div className="absolute -inset-1 rounded-full bg-gradient-to-r from-blue-400 to-indigo-400 opacity-30 blur group-hover:opacity-60 transition-opacity duration-200" />
             </motion.a>
 
             <motion.a

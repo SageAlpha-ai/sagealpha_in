@@ -33,9 +33,9 @@ const steps = [
 
 function ProblemSolutionSection() {
   return (
-    <section className="relative overflow-hidden bg-slate-950 py-24 sm:py-32">
+    <section className="relative overflow-hidden py-24 sm:py-32 border-t border-blue-100/40">
       {/* Background Gradients */}
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-blue-900/20 via-slate-950 to-slate-950" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-blue-100/40 via-transparent to-transparent pointer-events-none" />
 
       <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl text-center mb-20">
@@ -43,16 +43,16 @@ function ProblemSolutionSection() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-3xl font-bold tracking-tight text-white sm:text-4xl"
+            className="text-3xl font-bold tracking-tight text-[#0B1F33] sm:text-4xl"
           >
-            From Friction to <span className="text-blue-500">Flow</span>
+            From Friction to <span className="text-blue-600">Flow</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="mt-4 text-lg leading-8 text-slate-400"
+            className="mt-4 text-lg leading-8 text-slate-600"
           >
             We bridge the gap between ambitious AI concepts and diverse, reliable operational reality.
           </motion.p>
@@ -61,7 +61,7 @@ function ProblemSolutionSection() {
         <div className="relative">
           {/* Connecting Line (Desktop) */}
           <div className="absolute top-12 left-0 w-full hidden lg:block">
-            <div className="absolute inset-0 top-1/2 h-0.5 w-full -translate-y-1/2 bg-slate-800" />
+            <div className="absolute inset-0 top-1/2 h-0.5 w-full -translate-y-1/2 bg-slate-200" />
             <motion.div
               initial={{ scaleX: 0 }}
               whileInView={{ scaleX: 1 }}
@@ -81,16 +81,16 @@ function ProblemSolutionSection() {
                 transition={{ delay: index * 0.3, duration: 0.8 }}
                 className="relative flex flex-col items-center text-center"
               >
-                <div className={`relative z-10 flex h-24 w-24 items-center justify-center rounded-3xl border-4 border-slate-950 ${step.bg} shadow-2xl transition-transform duration-300 hover:scale-110 hover:rotate-3`}>
+                <div className={`relative z-10 flex h-24 w-24 items-center justify-center rounded-3xl border-4 border-white ${step.bg} shadow-xl shadow-slate-200/50 transition-transform duration-300 hover:scale-110 hover:rotate-3`}>
                   <step.icon className={`h-10 w-10 ${step.color}`} />
                 </div>
 
-                <div className="mt-8 relative z-10 bg-slate-900/50 backdrop-blur-sm p-6 rounded-2xl border border-slate-800 hover:border-slate-700 transition-colors">
-                  <h3 className="text-xl font-bold text-white mb-3 flex items-center justify-center gap-2">
-                    <span className="text-sm font-light text-slate-500 opacity-50">0{step.id}.</span>
+                <div className="mt-8 relative z-10 bg-white/80 backdrop-blur-sm p-6 rounded-2xl border border-slate-100 shadow-lg shadow-slate-200/40 hover:border-blue-200 transition-colors">
+                  <h3 className="text-xl font-bold text-[#0B1F33] mb-3 flex items-center justify-center gap-2">
+                    <span className="text-sm font-light text-slate-400 opacity-50">0{step.id}.</span>
                     {step.title}
                   </h3>
-                  <p className="text-slate-400 leading-relaxed text-sm">
+                  <p className="text-slate-600 leading-relaxed text-sm">
                     {step.description}
                   </p>
                 </div>

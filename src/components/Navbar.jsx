@@ -40,19 +40,19 @@ function ServicesMegaMenu({ isOpen, onClose }) {
   if (!isOpen) return null
 
   return (
-    <div className="absolute left-0 right-0 top-full z-50 border-t border-slate-700 bg-slate-900/95 backdrop-blur-xl shadow-2xl transition-all duration-300 animate-in fade-in slide-in-from-top-4">
+    <div className="absolute left-0 right-0 top-full z-50 border-t border-slate-200 bg-white/98 backdrop-blur-xl shadow-2xl transition-all duration-300 animate-in fade-in slide-in-from-top-4">
       <div className="mx-auto max-w-7xl p-8 lg:px-8">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-4">
 
           <div className="lg:col-span-1">
-            <h3 className="text-sm font-semibold text-blue-400 uppercase tracking-widest mb-4">Core Services</h3>
-            <p className="text-slate-400 text-sm mb-6">
+            <h3 className="text-sm font-semibold text-blue-600 uppercase tracking-widest mb-4">Core Services</h3>
+            <p className="text-slate-600 text-sm mb-6">
               End-to-end capabilities from strategy to production-grade implementation.
             </p>
             <Link
               to="/services"
               onClick={onClose}
-              className="text-sm font-medium text-white hover:text-blue-400 transition-colors flex items-center gap-2"
+              className="text-sm font-medium text-slate-900 hover:text-blue-600 transition-colors flex items-center gap-2"
             >
               View All Services <ChevronDown className="-rotate-90 h-4 w-4" />
             </Link>
@@ -63,14 +63,14 @@ function ServicesMegaMenu({ isOpen, onClose }) {
             <ul className="space-y-3">
               {coreServices.slice(0, 3).map((service) => (
                 <li key={service.name}>
-                  <button onClick={() => handleServiceClick(service.href)} className="text-sm text-slate-300 hover:text-white transition-colors text-left">
+                  <button onClick={() => handleServiceClick(service.href)} className="text-sm text-slate-700 hover:text-blue-600 transition-colors text-left">
                     {service.name}
                   </button>
                 </li>
               ))}
               {extendedServices.slice(0, 3).map((service) => (
                 <li key={service.name}>
-                  <button onClick={() => handleServiceClick(service.href)} className="text-sm text-slate-300 hover:text-white transition-colors text-left">
+                  <button onClick={() => handleServiceClick(service.href)} className="text-sm text-slate-700 hover:text-blue-600 transition-colors text-left">
                     {service.name}
                   </button>
                 </li>
@@ -83,14 +83,14 @@ function ServicesMegaMenu({ isOpen, onClose }) {
             <ul className="space-y-3">
               {coreServices.slice(3).map((service) => (
                 <li key={service.name}>
-                  <button onClick={() => handleServiceClick(service.href)} className="text-sm text-slate-300 hover:text-white transition-colors text-left">
+                  <button onClick={() => handleServiceClick(service.href)} className="text-sm text-slate-700 hover:text-blue-600 transition-colors text-left">
                     {service.name}
                   </button>
                 </li>
               ))}
               {extendedServices.slice(3).map((service) => (
                 <li key={service.name}>
-                  <button onClick={() => handleServiceClick(service.href)} className="text-sm text-slate-300 hover:text-white transition-colors text-left">
+                  <button onClick={() => handleServiceClick(service.href)} className="text-sm text-slate-700 hover:text-blue-600 transition-colors text-left">
                     {service.name}
                   </button>
                 </li>
@@ -98,12 +98,12 @@ function ServicesMegaMenu({ isOpen, onClose }) {
             </ul>
           </div>
 
-          <div className="lg:col-span-1 bg-slate-800/50 rounded-xl p-6 border border-slate-700">
-            <h4 className="font-semibold text-white mb-2">Enterprise Ready?</h4>
-            <p className="text-xs text-slate-400 mb-4">
+          <div className="lg:col-span-1 bg-slate-50 rounded-xl p-6 border border-slate-200">
+            <h4 className="font-semibold text-slate-900 mb-2">Enterprise Ready?</h4>
+            <p className="text-xs text-slate-600 mb-4">
               See how we helped a F500 retailer scale their AI operations.
             </p>
-            <Link to="/case-studies" onClick={onClose} className="text-xs font-semibold text-blue-400 hover:text-blue-300 transition-colors">
+            <Link to="/case-studies" onClick={onClose} className="text-xs font-semibold text-blue-600 hover:text-blue-700 transition-colors">
               Read Case Study &rarr;
             </Link>
           </div>
@@ -140,16 +140,16 @@ function Navbar() {
     <header
       ref={menuRef}
       className={`fixed inset-x-0 top-0 z-50 transition-all duration-300 ${scrolled || isServicesOpen || isMobileMenuOpen
-          ? 'bg-slate-950/80 backdrop-blur-md shadow-lg border-b border-white/5'
-          : 'bg-transparent backdrop-blur-none border-b border-transparent'
+        ? 'bg-white/95 backdrop-blur-md shadow-lg border-b border-slate-200'
+        : 'bg-transparent backdrop-blur-none border-b border-transparent'
         }`}
     >
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
 
         {/* Logo */}
         <div className="flex lg:flex-1">
-          <a href="#top" className="text-xl font-bold text-white tracking-tighter">
-            SageAlpha
+          <a href="#top" className="flex items-center">
+            <img src="/logo/sagealpha-logo.png" alt="SageAlpha" className="h-10 w-auto object-contain" />
           </a>
         </div>
 
@@ -171,13 +171,13 @@ function Navbar() {
               <button
                 key={item.label}
                 onClick={() => setIsServicesOpen(!isServicesOpen)}
-                className="flex items-center gap-1 text-sm font-medium leading-6 text-slate-300 transition-colors hover:text-white focus:outline-none"
+                className={`flex items-center gap-1 text-sm font-medium leading-6 transition-colors focus:outline-none ${scrolled || isServicesOpen ? 'text-slate-700 hover:text-blue-600' : 'text-slate-300 hover:text-white'}`}
               >
                 {item.label}
                 <ChevronDown className={`h-4 w-4 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} />
               </button>
             ) : (
-              <a key={item.label} href={item.href} className="text-sm font-medium leading-6 text-slate-300 transition-colors hover:text-white">
+              <a key={item.label} href={item.href} className={`text-sm font-medium leading-6 transition-colors ${scrolled ? 'text-slate-700 hover:text-blue-600' : 'text-slate-300 hover:text-white'}`}>
                 {item.label}
               </a>
             )

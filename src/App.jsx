@@ -7,7 +7,7 @@ import Services from './pages/Services'
 function App() {
   return (
     <BrowserRouter>
-      <div className="flex min-h-screen flex-col bg-slate-50">
+      <div className="flex min-h-screen flex-col bg-[#0B1220] text-slate-400">
         <Navbar />
         <main>
           <Routes>

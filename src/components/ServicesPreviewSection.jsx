@@ -77,11 +77,11 @@ const itemVariants = {
 
 function ServicesPreviewSection() {
   return (
-    <section id="services" className="relative overflow-hidden bg-slate-50 py-24 sm:py-32">
+    <section id="services" className="relative overflow-hidden py-24 sm:py-32 border-t border-blue-100/40">
       {/* Background Decor */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
-        <div className="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] bg-blue-100 rounded-full blur-[100px] opacity-60" />
-        <div className="absolute bottom-[-10%] left-[-5%] w-[500px] h-[500px] bg-purple-100 rounded-full blur-[100px] opacity-60" />
+        <div className="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] bg-blue-50 rounded-full blur-[100px] opacity-60" />
+        <div className="absolute bottom-[-10%] left-[-5%] w-[500px] h-[500px] bg-indigo-50 rounded-full blur-[100px] opacity-60" />
       </div>
 
       <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
@@ -91,10 +91,10 @@ function ServicesPreviewSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="text-3xl font-bold tracking-tight text-slate-900 sm:text-5xl"
+            className="text-3xl font-bold tracking-tight text-[#0B1F33] sm:text-5xl"
           >
             Engineering the <br />
-            <span className="text-blue-600">Future of Intelligence</span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Future of Intelligence</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -129,7 +129,7 @@ function ServicesPreviewSection() {
                     <service.icon className="h-7 w-7" />
                   </div>
 
-                  <h3 className="text-xl font-bold text-slate-900 group-hover:text-blue-600 transition-colors">
+                  <h3 className="text-xl font-bold text-[#0B1F33] group-hover:text-blue-600 transition-colors">
                     {service.title}
                   </h3>
 

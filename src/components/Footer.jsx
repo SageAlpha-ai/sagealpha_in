@@ -8,7 +8,7 @@ function Footer() {
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
           <div>
             <div className="flex items-center gap-2">
-              <span className="text-2xl font-bold text-white tracking-tight">SageAlpha</span>
+              <img src="/logo/sagealpha-logo.png" alt="SageAlpha" className="h-10 w-auto object-contain" />
             </div>
             <p className="mt-4 text-sm leading-6 text-slate-400 max-w-sm">
               We build the systems that power the future. Enterprise AI, Data, and Cloud solutions engineering for scale, security, and impact.
