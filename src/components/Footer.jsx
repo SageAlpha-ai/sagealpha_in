@@ -18,7 +18,7 @@ function Footer() {
             </div>
           </div>
 
-          <div className="grid grid-cols-2 gap-8 lg:col-span-2 sm:grid-cols-4">
+          <div className="grid grid-cols-2 gap-8 lg:col-span-2 sm:grid-cols-5">
             <div>
               <h3 className="text-sm font-semibold leading-6 text-white">Services</h3>
               <ul className="mt-6 space-y-4">
@@ -57,13 +57,16 @@ function Footer() {
                 ))}
               </ul>
             </div>
-            <div className="text-right sm:text-left">
+            <div className="text-left sm:col-span-2">
               <h3 className="text-sm font-semibold leading-6 text-white">Contact</h3>
               <ul className="mt-6 space-y-4 text-sm text-slate-400">
-                <li>Pune, India</li>
+                <li className="leading-relaxed">
+                  SNo 8 1A 1B Office No 110, Commerce Center Shiva,<br />
+                  Pimpri Waghire, Pune, Pune City, Maharashtra, India, 411017
+                </li>
                 <li>
-                  <a href="mailto:hello@sagealpha.ai" className="hover:text-blue-400 transition-colors">
-                    hello@sagealpha.ai
+                  <a href="mailto:sagealpha.ai@gmail.com" className="hover:text-blue-400 transition-colors">
+                    sagealpha.ai@gmail.com
                   </a>
                 </li>
               </ul>

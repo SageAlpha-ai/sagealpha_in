@@ -26,7 +26,7 @@ function CredibilitySection() {
 
             <h2 className="text-4xl font-bold tracking-tight text-[#0B1F33] sm:text-5xl mb-6">
               25+ Years of Experience.<br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">
+              <span className="">
                 One Clear Vision.
               </span>
             </h2>

@@ -11,7 +11,7 @@ function CareersSection() {
             id="careers-heading"
             className="text-3xl font-semibold tracking-tight text-[#0B1F33] sm:text-4xl"
           >
-            Join Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Team</span>
+            Join Our <span className="">Team</span>
           </h2>
           <p className="mt-6 text-base text-slate-600 sm:text-lg leading-relaxed">
             We're building the future of enterprise AI. If you're passionate

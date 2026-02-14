@@ -31,7 +31,7 @@ function FinalCTASection() {
           transition={{ duration: 0.8 }}
         >
           <h2 className="text-4xl font-bold tracking-tight text-white sm:text-6xl mb-6">
-            Ready to <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-indigo-400">Transform</span> Your Business?
+            Ready to <span className="">Transform</span> Your Business?
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-slate-300">
             Join the fleet of forward-thinking enterprises building their future with SageAlpha today.

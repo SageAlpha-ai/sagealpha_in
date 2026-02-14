@@ -3,6 +3,7 @@ import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Home from './pages/Home'
 import Services from './pages/Services'
+import ChatAssistant from './components/ChatAssistant'
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           </Routes>
         </main>
         <Footer />
+        <ChatAssistant />
       </div>
     </BrowserRouter>
   )

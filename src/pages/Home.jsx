@@ -21,10 +21,10 @@ function Home() {
         <IndustriesSection />
         <CaseStudiesSection />
         <WhitepapersSection />
-        <CareersSection />
         <PartnershipsSection />
         <PartnersSection />
         <FinalCTASection />
+         <CareersSection />
       </div>
     </>
   )

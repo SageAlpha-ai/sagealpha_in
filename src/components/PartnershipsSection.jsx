@@ -11,7 +11,7 @@ function PartnershipsSection() {
             id="partnerships-heading"
             className="text-3xl font-semibold tracking-tight text-[#0B1F33] sm:text-4xl"
           >
-            Strategic <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Partnerships</span>
+            Strategic <span className="">Partnerships</span>
           </h2>
           <p className="mt-6 text-base text-slate-600 sm:text-lg leading-relaxed">
             Interested in partnering with us? Let's explore how we can create

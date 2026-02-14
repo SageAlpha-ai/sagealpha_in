@@ -74,12 +74,12 @@ function ExecutionFrameworkSection() {
             <div className="absolute bottom-0 left-0 translate-y-1/3 -translate-x-1/3 w-[500px] h-[500px] bg-indigo-100/40 rounded-full blur-[100px] pointer-events-none" />
 
             <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
-                <div className="mx-auto max-w-2xl text-center mb-16">
+                <div className="max-w-2xl text-left mb-16">
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="text-3xl font-bold tracking-tight text-[#0B1F33] sm:text-4xl"
+                        className="text-3xl font-bold tracking-tight text-[#0B1F33] sm:text-5xl"
                     >
                         Our AI Development Process
                     </motion.h2>
@@ -88,7 +88,7 @@ function ExecutionFrameworkSection() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.1 }}
-                        className="mt-4 text-lg text-slate-600"
+                        className="mt-4 text-lg text-blue-600 font-medium"
                     >
                         Engineered for Predictable, High-Quality Delivery
                     </motion.p>

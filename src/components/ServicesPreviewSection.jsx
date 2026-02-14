@@ -7,51 +7,77 @@ const services = [
     title: 'Agentic AI Solutions',
     href: '/services#agentic-ai',
     icon: Bot,
-    description: 'Autonomous multi-agent systems that execute complex workflows.',
-    bullets: ['Multi-agent systems', 'Intelligent automation', 'Decision orchestration'],
+    description: 'AI systems that don’t just respond — they take action and get work done.',
+    bullets: [
+      'AI agents that complete real business tasks',
+      'Smart workflow automation',
+      'Connected systems that think and act together'
+    ],
     color: 'from-blue-500 to-cyan-500',
   },
   {
     title: 'AI & ML Engineering',
     href: '/services#ai-ml-engineering',
     icon: Brain,
-    description: 'Production-grade LLM applications and custom model development.',
-    bullets: ['LLM implementation', 'RAG pipelines', 'Custom ML models'],
+    description: 'We design, build, and launch AI applications that actually work in the real world.',
+    bullets: [
+      'LLM-powered applications',
+      'Search & knowledge systems (RAG)',
+      'Custom machine learning models'
+    ],
     color: 'from-purple-500 to-pink-500',
   },
   {
     title: 'Data & Analytics',
     href: '/services#data-analytics',
     icon: BarChart3,
-    description: 'Modern data platforms for real-time actionable insights.',
-    bullets: ['Data platforms', 'Advanced analytics', 'Business insights'],
+    description: 'Turn scattered data into clear insights your team can act on.',
+    bullets: [
+      'Modern data platforms',
+      'Real-time dashboards & reporting',
+      'Data-driven decision support'
+    ],
     color: 'from-emerald-500 to-teal-500',
   },
   {
-    title: 'Cloud Strategy',
+    title: 'Cloud Strategy & Architecture',
     href: '/services#cloud-strategy',
     icon: Cloud,
-    description: 'Scalable, secure, and cost-effective cloud architectures.',
-    bullets: ['Azure & AWS architecture', 'Cloud modernization', 'Cost optimization'],
+    description: 'Build a secure, scalable cloud foundation that supports your growth.',
+    bullets: [
+      'Azure & AWS architecture design',
+      'Cloud migration & modernization',
+      'Cost control & performance optimization'
+    ],
     color: 'from-sky-500 to-indigo-500',
   },
   {
-    title: 'DevOps & Platform',
+    title: 'DevOps & Platform Engineering',
     href: '/services#devops-platform',
     icon: Terminal,
-    description: 'Automated infrastructure for velocity and reliability.',
-    bullets: ['CI/CD pipelines', 'Infrastructure automation', 'Reliability & scale'],
+    description: 'Ship faster, deploy safely, and scale without chaos.',
+    bullets: [
+      'Automated CI/CD pipelines',
+      'Infrastructure as code',
+      'High-availability & system reliability'
+    ],
     color: 'from-orange-500 to-red-500',
   },
   {
     title: 'AI Program Consulting',
     href: '/services#ai-program-consulting',
     icon: Lightbulb,
-    description: 'Strategic advisory to navigate the AI transformation journey.',
-    bullets: ['Vision & roadmap', 'Architecture design', 'Enterprise adoption'],
+    description: 'From idea to execution — we guide your entire AI journey.',
+    bullets: [
+      'Clear AI roadmap aligned to business goals',
+      'Architecture & governance planning',
+      'Enterprise-wide AI adoption strategy'
+    ],
     color: 'from-amber-500 to-yellow-500',
   },
 ]
+
+
 
 const containerVariants = {
   hidden: { opacity: 0 },
@@ -94,16 +120,16 @@ function ServicesPreviewSection() {
             className="text-3xl font-bold tracking-tight text-[#0B1F33] sm:text-5xl"
           >
             Engineering the <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Future of Intelligence</span>
+            <span className="">Future of Intelligence</span>
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="mt-6 text-lg leading-8 text-slate-600"
+            className="mt-4 text-xl text-blue-600 font-medium"
           >
-            We provide end-to-end expertise across the entire data and AI value chain, helping you build systems that think, learn, and scale.
+            helping you build systems that think, learn, and scale.
           </motion.p>
         </div>
 
