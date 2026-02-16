@@ -1,9 +1,27 @@
-import { motion } from 'framer-motion'
+import { useState, useEffect } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
 import { Link } from 'react-router-dom'
 import { ArrowRight, ChevronRight } from 'lucide-react'
 
+const HERO_PHRASES = [
+  "Engineered to Scale.",
+  "Built for Enterprise.",
+  "Designed for Impact.",
+  "Powered by Real Data.",
+  "Production Ready AI.",
+  "Trusted by Leaders."
+]
+
 function HeroSection() {
+  const [index, setIndex] = useState(0)
   const scrollingText = "Agentic AI • Enterprise LLM • Cloud Architecture • AI Governance • Data Modernization • MLOps • Intelligent Systems • Scalable Platforms • "
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex((prev) => (prev + 1) % HERO_PHRASES.length)
+    }, 4000)
+    return () => clearInterval(interval)
+  }, [])
 
   return (
     <section className="relative flex min-h-screen w-full items-center justify-center overflow-hidden bg-[#030B1F]">
@@ -42,9 +60,30 @@ function HeroSection() {
           >
             Enterprise AI.
             <br />
-            <span className="bg-gradient-to-r from-[#3B82F6] via-[#6366F1] to-[#22D3EE] bg-clip-text text-transparent">
-              Engineered to Scale big.
-            </span>
+            {/* Animated Rotating Text */}
+            <div className="relative flex justify-center h-[1.2em] overflow-hidden whitespace-nowrap">
+              <AnimatePresence mode="popLayout">
+                <motion.span
+                  key={index}
+                  initial={{ y: "100%", opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  exit={{ y: "-100%", opacity: 0 }}
+                  transition={{
+                    duration: 1.3,
+                    ease: [0.33, 1, 0.68, 1]
+                  }}
+                  className="absolute bg-gradient-to-r from-[#3B82F6] via-[#6366F1] to-[#22D3EE] bg-clip-text text-transparent px-1 pb-4 whitespace-nowrap"
+                >
+                  {HERO_PHRASES[index]}
+                </motion.span>
+
+              </AnimatePresence>
+
+              {/* Invisible Spacer for Height */}
+              <span className="opacity-0 pointer-events-none pb-4 whitespace-nowrap" aria-hidden="true">
+                Built for Enterprise.
+              </span>
+            </div>
           </motion.h1>
 
           {/* Subtext */}

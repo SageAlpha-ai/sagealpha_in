@@ -52,7 +52,7 @@ function ServicesMegaMenu({ isOpen, onClose }) {
             <Link
               to="/services"
               onClick={onClose}
-              className="text-sm font-medium text-slate-900 hover:text-blue-600 transition-colors flex items-center gap-2"
+              className="text-sm font-medium text-slate-900 hover:text-slate-950 transition-colors flex items-center gap-2"
             >
               View All Services <ChevronDown className="-rotate-90 h-4 w-4" />
             </Link>
@@ -63,14 +63,14 @@ function ServicesMegaMenu({ isOpen, onClose }) {
             <ul className="space-y-3">
               {coreServices.slice(0, 3).map((service) => (
                 <li key={service.name}>
-                  <button onClick={() => handleServiceClick(service.href)} className="text-sm text-slate-700 hover:text-blue-600 transition-colors text-left">
+                  <button onClick={() => handleServiceClick(service.href)} className="text-sm text-slate-700 hover:text-slate-900 transition-colors text-left">
                     {service.name}
                   </button>
                 </li>
               ))}
               {extendedServices.slice(0, 3).map((service) => (
                 <li key={service.name}>
-                  <button onClick={() => handleServiceClick(service.href)} className="text-sm text-slate-700 hover:text-blue-600 transition-colors text-left">
+                  <button onClick={() => handleServiceClick(service.href)} className="text-sm text-slate-700 hover:text-slate-900 transition-colors text-left">
                     {service.name}
                   </button>
                 </li>
@@ -83,14 +83,14 @@ function ServicesMegaMenu({ isOpen, onClose }) {
             <ul className="space-y-3">
               {coreServices.slice(3).map((service) => (
                 <li key={service.name}>
-                  <button onClick={() => handleServiceClick(service.href)} className="text-sm text-slate-700 hover:text-blue-600 transition-colors text-left">
+                  <button onClick={() => handleServiceClick(service.href)} className="text-sm text-slate-700 hover:text-slate-900 transition-colors text-left">
                     {service.name}
                   </button>
                 </li>
               ))}
               {extendedServices.slice(3).map((service) => (
                 <li key={service.name}>
-                  <button onClick={() => handleServiceClick(service.href)} className="text-sm text-slate-700 hover:text-blue-600 transition-colors text-left">
+                  <button onClick={() => handleServiceClick(service.href)} className="text-sm text-slate-700 hover:text-slate-900 transition-colors text-left">
                     {service.name}
                   </button>
                 </li>
