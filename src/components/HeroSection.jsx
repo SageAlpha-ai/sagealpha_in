@@ -43,7 +43,7 @@ function HeroSection() {
             Enterprise AI.
             <br />
             <span className="bg-gradient-to-r from-[#3B82F6] via-[#6366F1] to-[#22D3EE] bg-clip-text text-transparent">
-              Engineered to Scale.
+              Engineered to Scale big.
             </span>
           </motion.h1>
 
