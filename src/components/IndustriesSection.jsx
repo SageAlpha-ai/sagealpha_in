@@ -36,7 +36,7 @@ const industries = [
 
 function IndustriesSection() {
     return (
-        <section className="relative py-24 sm:py-32 bg-slate-50 overflow-hidden">
+        <section className="relative py-10 sm:py-32 bg-slate-50 overflow-hidden">
             <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
                 {/* Header */}
                 <div className="mb-12 max-w-2xl">

@@ -35,6 +35,10 @@ function ChatAssistant() {
         if (!hasSeenWelcome) {
             const timer = setTimeout(() => {
                 setShowWelcome(true)
+                // Play subtle notification sound
+                const audio = new Audio('assistant/pop.wav')
+                audio.volume = 0.4
+                audio.play().catch(err => console.log('Audio autoplay blocked:', err))
             }, 2500)
             return () => clearTimeout(timer)
         }

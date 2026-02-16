@@ -42,7 +42,7 @@ function FinalCTASection() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               href="#contact"
-              className="group relative inline-flex items-center gap-2 rounded-full bg-blue-600 px-8 py-4 text-base font-semibold text-white shadow-xl shadow-blue-500/30 transition-all hover:bg-blue-500 hover:shadow-2xl hover:shadow-blue-500/40"
+              className="group relative inline-flex items-center gap-2 rounded-full bg-blue-600 px-8 py-4 text-base font-semibold text-white  transition-all hover:bg-blue-500 hover:shadow-2xl hover:shadow-blue-500/40"
             >
               Start Your Project
               <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
