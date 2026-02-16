@@ -155,7 +155,7 @@ function ServicesPreviewSection() {
                     <service.icon className="h-7 w-7" />
                   </div>
 
-                  <h3 className="text-xl font-bold text-[#0B1F33] group-hover:text-blue-600 transition-colors">
+                  <h3 className="text-xl font-bold text-[#0B1F33]  transition-colors">
                     {service.title}
                   </h3>
 

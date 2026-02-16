@@ -20,7 +20,7 @@ function CredibilitySection() {
             className="max-w-xl"
           >
             <div className="inline-flex items-center gap-2 rounded-full bg-blue-50 px-3 py-1 text-sm font-medium text-blue-700 mb-6">
-             
+
               About SageAlpha
             </div>
 
@@ -76,7 +76,22 @@ function CredibilitySection() {
                 <span className="text-xs sm:text-sm font-semibold text-blue-600 uppercase tracking-widest mt-1">Years</span>
               </div>
 
-              {/* Orbit 1 - Cloud */}
+              {/* Orbit 1 - Brain (Largest) */}
+              <motion.div
+                animate={{ rotate: 360 }}
+                transition={{ duration: 70, repeat: Infinity, ease: "linear" }}
+                className="absolute inset-[0%] border border-slate-100/60 rounded-full z-10"
+              >
+                <motion.div
+                  animate={{ rotate: -360 }}
+                  transition={{ duration: 70, repeat: Infinity, ease: "linear" }}
+                  className="absolute top-1/2 left-0 -translate-x-1/2 -translate-y-1/2 h-14 w-14 bg-white rounded-xl shadow-lg shadow-slate-200/50 border border-slate-50 flex items-center justify-center text-violet-500"
+                >
+                  <Brain size={24} />
+                </motion.div>
+              </motion.div>
+
+              {/* Orbit 2 - Cloud */}
               <motion.div
                 animate={{ rotate: 360 }}
                 transition={{ duration: 40, repeat: Infinity, ease: "linear" }}
@@ -91,7 +106,22 @@ function CredibilitySection() {
                 </motion.div>
               </motion.div>
 
-              {/* Orbit 2 - Database */}
+              {/* Orbit 3 - Security */}
+              <motion.div
+                animate={{ rotate: -360 }}
+                transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
+                className="absolute inset-[18%] border border-slate-100/60 rounded-full z-10"
+              >
+                <motion.div
+                  animate={{ rotate: 360 }}
+                  transition={{ duration: 60, repeat: Infinity, ease: "linear" }}
+                  className="absolute top-1/2 right-0 translate-x-1/2 -translate-y-1/2 h-12 w-12 bg-white rounded-xl shadow-lg shadow-slate-200/50 border border-slate-50 flex items-center justify-center text-emerald-500"
+                >
+                  <ShieldCheck size={20} />
+                </motion.div>
+              </motion.div>
+
+              {/* Orbit 4 - Database */}
               <motion.div
                 animate={{ rotate: -360 }}
                 transition={{ duration: 50, repeat: Infinity, ease: "linear" }}
@@ -105,16 +135,6 @@ function CredibilitySection() {
                   <Database size={24} />
                 </motion.div>
               </motion.div>
-
-              {/* Static Orbiting Element - Brain */}
-              <div className="absolute top-1/2 left-0 -translate-x-4 -translate-y-1/2 z-10 hidden sm:flex h-12 w-12 bg-white rounded-lg shadow-lg border border-slate-50 items-center justify-center text-violet-500">
-                <Brain size={20} />
-              </div>
-
-              {/* Static Orbiting Element - Security */}
-              <div className="absolute top-1/2 right-0 translate-x-4 -translate-y-1/2 z-10 hidden sm:flex h-12 w-12 bg-white rounded-lg shadow-lg border border-slate-50 items-center justify-center text-emerald-500">
-                <ShieldCheck size={20} />
-              </div>
 
             </div>
           </motion.div>

@@ -16,15 +16,15 @@ function Home() {
       <HeroSection />
       <div className="bg-gradient-to-b from-[#F5F9FF] via-[#F8FBFF] to-[#EEF6FF]">
         <CredibilitySection />
-        <ExecutionFrameworkSection />
         <ServicesPreviewSection />
+        <ExecutionFrameworkSection />
         <IndustriesSection />
         <CaseStudiesSection />
         <WhitepapersSection />
         <PartnershipsSection />
         <PartnersSection />
         <FinalCTASection />
-         <CareersSection />
+        <CareersSection />
       </div>
     </>
   )

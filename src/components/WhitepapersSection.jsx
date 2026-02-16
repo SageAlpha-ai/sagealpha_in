@@ -7,7 +7,7 @@ const whitepapers = [
     title: 'Agentic AI in Financial Research',
     category: 'Finance & AI',
     description: 'Discover how autonomous AI agents are revolutionizing equity research, market analysis, and real-time decision making in the financial sector.',
-    image: 'https://images.unsplash.com/photo-1611974765270-ca1258634369?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+    image: 'whitepapers/w1.jpg',
     readTime: '10 min read',
     link: 'https://drive.google.com/file/d/1IM6RxQXegTYQ-EZ13RhGjlPS6Cc8vd4a/view?usp=sharing'
   },
@@ -16,7 +16,7 @@ const whitepapers = [
     title: 'Precise Financial Prompting',
     category: 'Prompt Engineering',
     description: 'A deep dive into advanced prompting strategies for LLMs to ensure high-accuracy financial output, reducing hallucinations and improving reliability.',
-    image: 'https://images.unsplash.com/photo-1639322537228-ad71e48679f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80',
+    image: 'whitepapers/w2.jpg',
     readTime: '8 min read'
   }
 ]
@@ -84,7 +84,7 @@ function WhitepapersSection() {
                   <span>{paper.readTime}</span>
                 </div>
 
-                <h3 className="text-2xl font-bold text-[#0B1F33] mb-4 group-hover:text-blue-600 transition-colors">
+                <h3 className="text-2xl font-bold text-[#0B1F33] mb-4  transition-colors">
                   {paper.title}
                 </h3>
 

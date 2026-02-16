@@ -67,14 +67,14 @@ function HeroSection() {
           >
             <a
               href="#contact"
-              className="group relative inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-blue-600 to-indigo-600 px-8 py-4 text-lg font-semibold text-white shadow-lg shadow-blue-500/25 transition-all hover:scale-105 hover:shadow-blue-500/40"
+              className="group relative inline-flex items-center gap-2 rounded-4xl bg-gradient-to-r from-blue-600 to-indigo-600 px-8 py-4 text-lg font-semibold text-white shadow-lg shadow-blue-500/25 transition-all hover:scale-105 hover:shadow-blue-500/40"
             >
               Talk to an Expert
               <ArrowRight className="h-5 w-5 transition-transform group-hover:translate-x-1" />
             </a>
             <Link
               to="/services"
-              className="group inline-flex items-center gap-2 rounded-full border border-slate-600 px-8 py-4 text-lg font-semibold text-white transition-all hover:bg-slate-800/50 hover:border-slate-500"
+              className="group inline-flex items-center gap-2 rounded-4xl border border-slate-600 px-8 py-4 text-lg font-semibold text-white transition-all hover:bg-slate-800/50 hover:border-slate-500"
             >
               Our Services
               <ChevronRight className="h-5 w-5 text-slate-400 transition-transform group-hover:translate-x-1" />

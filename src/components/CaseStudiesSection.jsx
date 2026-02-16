@@ -26,7 +26,7 @@ const caseStudies = [
     category: 'EdTech & AI',
     title: 'AI Tutor Assistant Improves Instructor Efficiency',
     description: 'Created an AI-driven grading and feedback assistant that improved instructor efficiency by 45% and cut student feedback loops to under 40 seconds.',
-    image: 'https://images.unsplash.com/photo-1509062522246-37559cc792f9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80', // Education/Classroom/Tech
+    image: 'case_studies/cs3.jpg', // Education/Classroom/Tech
     icon: GraduationCap,
     stat: '45% efficiency gain'
   }
@@ -80,15 +80,15 @@ function CaseStudiesSection() {
               {/* Content Section */}
               <div className="flex flex-1 flex-col p-6 sm:p-8">
                 <div className="mb-4 flex items-center gap-3">
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-blue-50 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                  {/* <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-blue-50 text-blue-600 group-hover:text-white transition-colors">
                     <study.icon className="h-5 w-5" />
-                  </div>
-                  <span className="text-xs font-bold uppercase tracking-wide text-blue-600">
+                  </div> */}
+                  <span className="text-xs font-bold uppercase tracking-wide text-[#0B1F33]">
                     {study.stat}
                   </span>
                 </div>
 
-                <h3 className="mb-3 text-xl font-bold leading-tight text-[#0B1F33] group-hover:text-blue-700 transition-colors">
+                <h3 className="mb-3 text-xl font-bold leading-tight text-[#0B1F33]  transition-colors">
                   {study.title}
                 </h3>
 
@@ -96,14 +96,14 @@ function CaseStudiesSection() {
                   {study.description}
                 </p>
 
-                <div className="mt-6 flex items-center gap-2 text-sm font-semibold text-blue-600 transition-colors group-hover:text-blue-800 cursor-pointer">
+                <div className="mt-6 flex items-center gap-2 text-sm font-semibold text-[#0B1F33] transition-colors group-hover:text-blue-800 cursor-pointer">
                   Read Case Study
                   <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </div>
               </div>
 
               {/* Bottom Border Accent */}
-              <div className="absolute bottom-0 left-0 h-1 w-full scale-x-0 bg-gradient-to-r from-blue-600 to-indigo-600 transition-transform duration-500 group-hover:scale-x-100 origin-left" />
+              {/* <div className="absolute bottom-0 left-0 h-1 w-full scale-x-0 bg-gradient-to-r from-blue-600 to-indigo-600 transition-transform duration-500 group-hover:scale-x-100 origin-left" /> */}
             </motion.article>
           ))}
         </div>

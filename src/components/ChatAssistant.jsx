@@ -89,28 +89,28 @@ function ChatAssistant() {
                         animate={{ opacity: 1, y: 0, scale: 1 }}
                         exit={{ opacity: 0, y: 20, scale: 0.95 }}
                         transition={{ duration: 0.3, ease: "easeOut" }}
-                        className="w-[90vw] sm:w-[400px] h-[600px] max-h-[80vh] flex flex-col bg-[#0B1221] border border-slate-700/50 rounded-2xl shadow-2xl overflow-hidden origin-bottom-right"
+                        className="w-[90vw] sm:w-[400px] h-[600px] max-h-[80vh] flex flex-col bg-white border border-slate-200 rounded-2xl shadow-2xl overflow-hidden origin-bottom-right"
                     >
                         {/* Header */}
-                        <div className="flex items-center justify-between p-4 border-b border-slate-800 bg-[#0F172A]">
+                        <div className="flex items-center justify-between p-4 border-b border-slate-100 bg-white/95 backdrop-blur-sm">
                             <div className="flex items-center gap-3">
                                 <div className="flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-tr from-blue-600 to-indigo-600 shadow-lg shadow-blue-500/20">
                                     <Bot className="h-6 w-6 text-white" />
                                 </div>
                                 <div>
-                                    <h3 className="text-sm font-bold text-white">SageAlpha Assistant</h3>
+                                    <h3 className="text-sm font-bold text-slate-900">SageAlpha Assistant</h3>
                                     <div className="flex items-center gap-1.5">
                                         <span className="relative flex h-2 w-2">
                                             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                                             <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
                                         </span>
-                                        <span className="text-xs text-slate-400">Online</span>
+                                        <span className="text-xs text-slate-500">Online</span>
                                     </div>
                                 </div>
                             </div>
                             <button
                                 onClick={handleCloseChat}
-                                className="p-2 text-slate-400 hover:text-white hover:bg-slate-800 rounded-full transition-colors"
+                                className="p-2 text-slate-400 hover:text-slate-900 hover:bg-slate-100 rounded-full transition-colors"
                                 aria-label="Close chat"
                             >
                                 <X className="h-5 w-5" />
@@ -118,7 +118,7 @@ function ChatAssistant() {
                         </div>
 
                         {/* Chat Body */}
-                        <div className="flex-1 overflow-y-auto p-4 space-y-6 bg-[#0B1221]/50 scrollbar-thin scrollbar-thumb-slate-700 scrollbar-track-transparent">
+                        <div className="flex-1 overflow-y-auto p-4 space-y-6 bg-slate-50 scrollbar-thin scrollbar-thumb-slate-200 scrollbar-track-transparent">
                             {/* Messages */}
                             {messages.map((msg, idx) => (
                                 <div
@@ -127,8 +127,8 @@ function ChatAssistant() {
                                 >
                                     <div
                                         className={`max-w-[85%] rounded-2xl px-4 py-3 text-sm leading-relaxed ${msg.type === 'user'
-                                                ? 'bg-blue-600 text-white rounded-br-sm'
-                                                : 'bg-slate-800 text-slate-200 border border-slate-700 rounded-bl-sm'
+                                            ? 'bg-blue-600 text-white rounded-br-sm shadow-md shadow-blue-500/10'
+                                            : 'bg-white text-slate-700 border border-slate-200 rounded-bl-sm shadow-sm'
                                             }`}
                                     >
                                         {msg.text}
@@ -139,14 +139,14 @@ function ChatAssistant() {
                         </div>
 
                         {/* Quick Prompts & Input */}
-                        <div className="p-4 bg-[#0F172A] border-t border-slate-800 space-y-4">
+                        <div className="p-4 bg-white border-t border-slate-100 space-y-4">
                             {messages.length < 3 && (
                                 <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-hide mask-fade-right">
                                     {QUICK_PROMPTS.map((prompt, i) => (
                                         <button
                                             key={i}
                                             onClick={() => handleSendMessage(prompt)}
-                                            className="flex-shrink-0 text-xs font-medium text-blue-300 bg-blue-900/20 hover:bg-blue-900/40 border border-blue-500/20 px-3 py-2 rounded-full transition-colors whitespace-nowrap"
+                                            className="flex-shrink-0 text-xs font-medium text-blue-600 bg-blue-50 hover:bg-blue-100 border border-blue-100 px-3 py-2 rounded-full transition-colors whitespace-nowrap"
                                         >
                                             {prompt}
                                         </button>
@@ -161,7 +161,7 @@ function ChatAssistant() {
                                     onChange={(e) => setInputValue(e.target.value)}
                                     onKeyPress={handleKeyPress}
                                     placeholder="Ask about AI strategy..."
-                                    className="flex-1 bg-slate-900 border border-slate-700 hover:border-slate-600 focus:border-blue-500 rounded-full py-3 pl-5 pr-12 text-sm text-white placeholder-slate-500 outline-none transition-all shadow-inner"
+                                    className="flex-1 bg-slate-50 border border-slate-200 hover:border-blue-300 focus:border-blue-500 rounded-full py-3 pl-5 pr-12 text-sm text-slate-900 placeholder-slate-400 outline-none transition-all shadow-sm focus:shadow-md focus:shadow-blue-500/5"
                                 />
                                 <button
                                     onClick={() => handleSendMessage(inputValue)}

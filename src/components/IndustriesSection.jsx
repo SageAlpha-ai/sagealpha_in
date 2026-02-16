@@ -14,7 +14,7 @@ const industries = [
     },
     {
         title: 'Finance & Insurance',
-        image: 'https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80',
+        image: 'services/s3.jpg',
         id: 3
     },
     {
@@ -86,7 +86,7 @@ function IndustriesSection() {
                                     {item.title}
                                 </h3>
 
-                                <span className="flex-shrink-0 flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white backdrop-blur-sm transition-all duration-300 group-hover:bg-white group-hover:text-blue-600">
+                                <span className="flex-shrink-0 flex h-10 w-10 items-center justify-center rounded-full bg-white/10 text-white backdrop-blur-sm transition-all duration-300 ">
                                     <ArrowRight className="h-5 w-5" />
                                 </span>
                             </div>

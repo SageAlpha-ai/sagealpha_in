@@ -52,7 +52,7 @@ function FinalCTASection() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               href="#schedule"
-              className="text-base font-semibold leading-6 text-white hover:text-blue-300 transition-colors flex items-center gap-2"
+              className="text-base font-semibold leading-6 text-white transition-colors flex items-center gap-2"
             >
               <Calendar className="h-4 w-4" />
               Schedule a Consultation

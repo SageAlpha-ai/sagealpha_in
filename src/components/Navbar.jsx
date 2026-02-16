@@ -45,7 +45,7 @@ function ServicesMegaMenu({ isOpen, onClose }) {
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-4">
 
           <div className="lg:col-span-1">
-            <h3 className="text-sm font-semibold text-blue-600 uppercase tracking-widest mb-4">Core Services</h3>
+            <h3 className="text-sm font-semibold text-slate-900 uppercase tracking-widest mb-4">Core Services</h3>
             <p className="text-slate-600 text-sm mb-6">
               End-to-end capabilities from strategy to production-grade implementation.
             </p>
@@ -103,7 +103,7 @@ function ServicesMegaMenu({ isOpen, onClose }) {
             <p className="text-xs text-slate-600 mb-4">
               See how we helped a F500 retailer scale their AI operations.
             </p>
-            <Link to="/case-studies" onClick={onClose} className="text-xs font-semibold text-blue-600 hover:text-blue-700 transition-colors">
+            <Link to="/case-studies" onClick={onClose} className="text-xs font-semibold text-slate-900 hover:text-slate-1000 transition-colors">
               Read Case Study &rarr;
             </Link>
           </div>
@@ -188,7 +188,7 @@ function Navbar() {
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <a
             href="#contact"
-            className="rounded-full bg-blue-600 px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-blue-500/20 transition-all hover:bg-blue-500 hover:scale-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+            className="rounded-lg bg-blue-600 px-5 py-2.5 text-sm font-semibold text-white shadow-lg shadow-blue-500/20 transition-all hover:bg-blue-500 hover:scale-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
           >
             Talk to an Expert
           </a>

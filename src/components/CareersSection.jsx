@@ -163,7 +163,7 @@ function CareersSection() {
                     className="group flex items-center justify-between p-5 rounded-xl border border-slate-200 bg-white hover:border-blue-600 hover:bg-blue-50/10 hover:shadow-lg transition-all duration-300 cursor-pointer"
                   >
                     <div>
-                      <h4 className="font-bold text-[#0B1F33] group-hover:text-blue-600 transition-colors">
+                      <h4 className="font-bold text-[#0B1F33]  transition-colors">
                         {role.title}
                       </h4>
                       <p className="text-sm text-slate-500 mt-1">
@@ -219,7 +219,7 @@ function CareersSection() {
                   <p className="text-[#0B1F33] font-medium leading-relaxed text-lg">
                     "The ownership culture here is unlike anywhere else. You build it, you launch it."
                   </p>
-                  <p className="text-sm text-blue-600 font-bold mt-2 uppercase tracking-wide">
+                  <p className="text-sm text-[#0B1F33] font-medium mt-2 uppercase tracking-wide">
                     — Engineering Team
                   </p>
                 </div>
