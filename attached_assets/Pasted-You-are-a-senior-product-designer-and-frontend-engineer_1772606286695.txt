@@ -1,0 +1,196 @@
+You are a senior product designer and frontend engineer working for a high-end AI infrastructure startup.
+
+Create a COMPLETE professional webpage for "Agentic AI Solutions" for the company SageAlpha (sagealpha.in).
+
+Context:
+SageAlpha provides enterprise Agentic AI systems. We build multi-agent AI architectures capable of goal decomposition, strategic planning, agent coordination, and secure execution. The architecture consists of multiple layers including orchestration, intelligence modules, secure execution, data fabric, and cloud infrastructure.
+
+This page must appear when the user clicks "Agentic AI Solutions" under the Services menu.
+
+The design must feel like a premium AI startup website similar to companies like Palantir, OpenAI platform pages, or enterprise AI infrastructure platforms. The UI must NOT feel like a basic AI-generated template.
+
+Use a modern dark futuristic theme consistent with AI infrastructure products.
+
+Primary goals of this page:
+• Explain SageAlpha's Agentic AI architecture
+• Showcase enterprise AI capabilities
+• Visually represent the multi-layer architecture
+• Demonstrate real-world applications
+• Keep users engaged while scrolling
+
+Use high-end UI techniques:
+• Smooth scroll animations
+• subtle glowing gradients
+• animated diagrams
+• modern cards
+• glassmorphism
+• professional icons
+• subtle particle background
+• section transitions
+• micro-interactions
+
+Avoid generic layouts. The page should feel like a real startup product page designed by senior designers.
+
+--------------------------------
+
+SECTION 1 — HERO
+
+Create a powerful hero section.
+
+Include:
+Headline:
+"Enterprise Agentic AI Infrastructure"
+
+Subtext:
+"Design, deploy and orchestrate autonomous AI agents that reason, plan, and execute complex workflows."
+
+CTA Buttons:
+• Explore Architecture
+• Talk to an AI Architect
+
+Add:
+• subtle animated AI network background
+• floating glowing particles
+• futuristic gradient lighting
+
+--------------------------------
+
+SECTION 2 — WHAT IS AGENTIC AI
+
+Explain agent-based AI systems.
+
+Use a 2-column layout.
+
+Left side:
+Text explanation of Agentic AI systems:
+- AI agents that can plan
+- AI agents that coordinate
+- AI agents that execute workflows autonomously
+- AI agents that operate securely in enterprise environments
+
+Right side:
+Illustration of agents collaborating in a workflow.
+
+--------------------------------
+
+SECTION 3 — AGENTIC AI ARCHITECTURE
+
+Create a visually impressive layered architecture diagram inspired by enterprise AI architecture diagrams.
+
+Display these layers visually with glowing connections between them:
+
+Layer 1 — Orchestration Layer
+• Goal Decomposition
+• Strategic Planning
+• Agent Coordination
+• Task Dispatcher
+
+Layer 2 — Intelligence Modules
+• Knowledge Extraction
+• Predictive Analytics
+• Natural Language Understanding
+• Decision Optimization
+
+Layer 3 — Secure Execution Layer
+• Policy Enforcement
+• Access Control
+• Sandboxed Runtime
+• Audit Logging
+
+Layer 4 — Data Fabric
+• Data Lakehouse
+• Vector Database
+• Real-time Streams
+• Knowledge Graph
+
+Layer 5 — Cloud Infrastructure
+• AWS / Azure / GCP
+• Kubernetes Clusters
+• Compute Resources
+• Global Network
+
+Create this as an interactive layered diagram with glowing nodes and connecting lines.
+
+--------------------------------
+
+SECTION 4 — CONFIDENCE DASHBOARD
+
+Create a modern side dashboard card showing system metrics:
+
+Confidence Score — 94%
+Policy Compliance — 100% PASS
+Execution Latency — 118ms avg
+Validation Rate — 99.1%
+
+Design it like an AI operations dashboard.
+
+--------------------------------
+
+SECTION 5 — INDUSTRY SOLUTIONS
+
+Show domain solutions using large interactive cards:
+
+Finance
+Cybersecurity
+Customer Service
+Software Engineering
+
+Each card should contain:
+icon
+short description
+hover animation
+
+--------------------------------
+
+SECTION 6 — WHY SAGEALPHA
+
+Explain advantages:
+
+• Multi-agent orchestration
+• enterprise security
+• scalable architecture
+• real-time reasoning systems
+• domain specific AI agents
+
+Use visually appealing feature cards.
+
+--------------------------------
+
+SECTION 7 — ENTERPRISE CALL TO ACTION
+
+Headline:
+"Deploy Agentic AI Systems for Your Enterprise"
+
+Buttons:
+• Launch Demo
+• Talk to an AI Architect
+
+--------------------------------
+
+Design Requirements:
+
+• modern enterprise UI
+• high-end visuals
+• smooth scroll animations
+• responsive layout
+• use professional icons
+• dark theme with glowing blue gradients
+• avoid template-like layout
+• spacing should feel premium
+• typography must feel like a serious tech product
+
+--------------------------------
+
+Technical:
+
+Use React + modern CSS or Tailwind.
+
+Structure components cleanly.
+
+Use reusable UI components.
+
+Animations should be subtle and performant.
+
+--------------------------------
+
+The final page should look like a professional AI infrastructure company product page and should impress enterprise users.

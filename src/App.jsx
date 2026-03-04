@@ -3,6 +3,7 @@ import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import Home from './pages/Home'
 import Services from './pages/Services'
+import AgenticAI from './pages/AgenticAI'
 import ChatAssistant from './components/ChatAssistant'
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/services" element={<Services />} />
+            <Route path="/services/agentic-ai" element={<AgenticAI />} />
           </Routes>
         </main>
         <Footer />

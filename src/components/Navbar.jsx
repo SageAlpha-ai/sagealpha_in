@@ -12,7 +12,7 @@ const navItems = [
 ]
 
 const coreServices = [
-  { name: 'Agentic AI Solutions', href: '/services#agentic-ai' },
+  { name: 'Agentic AI Solutions', href: '/services/agentic-ai' },
   { name: 'AI & Machine Learning Engineering', href: '/services#ai-ml-engineering' },
   { name: 'Data & Analytics', href: '/services#data-analytics' },
   { name: 'Cloud Strategy & Migration', href: '/services#cloud-strategy' },
