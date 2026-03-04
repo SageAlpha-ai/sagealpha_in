@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link, useNavigate, useLocation } from 'react-router-dom'
 import { ChevronDown, Menu, X } from 'lucide-react'
 
 const navItems = [
@@ -119,6 +119,8 @@ function Navbar() {
   const [isServicesOpen, setIsServicesOpen] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const menuRef = useRef(null)
+  const location = useLocation()
+  const isLightModePage = location.pathname.includes('agentic-ai')
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20)
@@ -171,13 +173,13 @@ function Navbar() {
               <button
                 key={item.label}
                 onClick={() => setIsServicesOpen(!isServicesOpen)}
-                className={`flex items-center gap-1 text-sm font-medium leading-6 transition-colors focus:outline-none ${scrolled || isServicesOpen ? 'text-slate-700 hover:text-blue-600' : 'text-slate-300 hover:text-white'}`}
+                className={`flex items-center gap-1 text-sm font-medium leading-6 transition-colors focus:outline-none ${scrolled || isServicesOpen || isLightModePage ? 'text-slate-700 hover:text-blue-600' : 'text-slate-300 hover:text-white'}`}
               >
                 {item.label}
                 <ChevronDown className={`h-4 w-4 transition-transform ${isServicesOpen ? 'rotate-180' : ''}`} />
               </button>
             ) : (
-              <a key={item.label} href={item.href} className={`text-sm font-medium leading-6 transition-colors ${scrolled ? 'text-slate-700 hover:text-blue-600' : 'text-slate-300 hover:text-white'}`}>
+              <a key={item.label} href={item.href} className={`text-sm font-medium leading-6 transition-colors ${scrolled || isLightModePage ? 'text-slate-700 hover:text-blue-600' : 'text-slate-300 hover:text-white'}`}>
                 {item.label}
               </a>
             )

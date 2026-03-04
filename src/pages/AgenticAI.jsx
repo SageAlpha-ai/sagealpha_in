@@ -58,7 +58,7 @@ function ParticleCanvas() {
 
         ctx.beginPath()
         ctx.arc(d.x, d.y, d.r, 0, Math.PI * 2)
-        ctx.fillStyle = 'rgba(14,165,233,0.3)'
+        ctx.fillStyle = 'rgba(2,132,199,0.7)'
         ctx.fill()
 
         dots.forEach((d2) => {
@@ -68,7 +68,7 @@ function ParticleCanvas() {
             ctx.beginPath()
             ctx.moveTo(d.x, d.y)
             ctx.lineTo(d2.x, d2.y)
-            ctx.strokeStyle = `rgba(14,165,233,${0.08 * (1 - dist / 120)})`
+            ctx.strokeStyle = `rgba(2,132,199,${0.35 * (1 - dist / 120)})`
             ctx.lineWidth = 0.7
             ctx.stroke()
           }
@@ -86,11 +86,17 @@ function Hero() {
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-slate-50">
       <ParticleCanvas />
-      <div className="absolute inset-0 bg-gradient-radial from-blue-900/25 via-transparent to-transparent" style={{ background: 'radial-gradient(ellipse 80% 60% at 50% 40%, rgba(219,234,254,0.8) 0%, transparent 70%)' }} />
+      <div
+        className="absolute inset-0 bg-gradient-radial from-blue-900/25 via-transparent to-transparent"
+        style={{
+          background:
+            "radial-gradient(ellipse 80% 60% at 50% 40%, rgba(219,234,254,0.8) 0%, transparent 70%)",
+        }}
+      />
       <div className="absolute top-1/3 left-1/4 w-96 h-96 rounded-full blur-[120px] bg-cyan-300/30 pointer-events-none" />
       <div className="absolute bottom-1/4 right-1/4 w-80 h-80 rounded-full blur-[100px] bg-blue-300/30 pointer-events-none" />
 
-      <div className="relative z-10 mx-auto max-w-5xl px-6 text-center pt-28 pb-20">
+      <div className="relative z-10 mx-auto max-w-7xl px-6 text-center pt-28 pb-20">
         <FadeUp>
           <span className="inline-flex items-center gap-2 rounded-full border border-cyan-500/30 bg-cyan-500/10 px-4 py-1.5 text-xs font-semibold text-cyan-400 tracking-widest uppercase mb-8">
             <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse" />
@@ -98,10 +104,11 @@ function Hero() {
           </span>
         </FadeUp>
         <FadeUp delay={0.1}>
-          <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold leading-[1.05] tracking-tight text-slate-900 mb-6">
-            Enterprise Agentic<br />
-            <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-indigo-400 bg-clip-text text-transparent">
-              AI Infrastructure
+          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-[1.12] tracking-tight text-slate-900 mb-6 max-w-6xl mx-auto">
+            Architecting the Future of Enterprise AI
+            <br />
+            <span className="bg-gradient-to-r from-cyan-500 via-blue-500 to-indigo-500 bg-clip-text text-transparent">
+              with Autonomous Agent Networks
             </span>
           </h1>
         </FadeUp>
@@ -117,7 +124,10 @@ function Hero() {
               className="group inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 px-8 py-3.5 text-sm font-semibold text-white shadow-lg shadow-blue-200 transition-all hover:shadow-blue-300 hover:scale-105"
             >
               Explore Architecture
-              <ChevronRight size={16} className="transition-transform group-hover:translate-x-1" />
+              <ChevronRight
+                size={16}
+                className="transition-transform group-hover:translate-x-1"
+              />
             </a>
             <a
               href="#contact"
@@ -146,7 +156,7 @@ function Hero() {
         </div> */}
       </div>
     </section>
-  )
+  );
 }
 
 /* ─── SECTION 2: WHAT IS AGENTIC AI ─── */
@@ -207,29 +217,26 @@ function WhatIsAgenticAI() {
   return (
     <section className="py-28 bg-white">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <FadeUp>
-          <p className="text-xs font-semibold text-cyan-400 tracking-widest uppercase mb-3">What Is Agentic AI</p>
-          <h2 className="text-4xl font-bold text-slate-900 mb-16 max-w-xl leading-tight">Autonomous agents that think, act, and adapt</h2>
-        </FadeUp>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <div className="space-y-6">
-            {agentCapabilities.map((c, i) => (
-              <FadeUp key={c.title} delay={i * 0.08}>
-                <div className="flex gap-5 group">
-                  <div className="flex-shrink-0 mt-0.5 w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-500/20 to-blue-600/20 border border-cyan-500/20 flex items-center justify-center transition-all group-hover:border-cyan-500/50 group-hover:shadow-lg group-hover:shadow-cyan-500/10">
-                    <c.icon size={18} className="text-cyan-400" />
-                  </div>
-                  <div>
-                    <h3 className="text-base font-semibold text-slate-900 mb-1">{c.title}</h3>
-                    <p className="text-sm text-slate-600 leading-relaxed">{c.desc}</p>
-                  </div>
-                </div>
-              </FadeUp>
-            ))}
-          </div>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+          <FadeUp>
+            <p style={{ fontSize: 12, fontWeight: 700, color: '#0891b2', letterSpacing: '0.04em', marginBottom: 14 }}>
+              Automation : Technology
+            </p>
+            <h2 style={{ fontSize: 'clamp(2rem, 3.5vw, 2.8rem)', fontWeight: 800, color: '#0f172a', lineHeight: 1.15, marginBottom: 20 }}>
+              What is agentic AI?
+            </h2>
+            <p style={{ fontSize: 16, fontWeight: 700, color: '#1e293b', lineHeight: 1.7, marginBottom: 16 }}>
+              Agentic AI is a form of artificial intelligence (AI) that can make decisions, take autonomous actions, and continually learn from interactions.
+            </p>
+            <p style={{ fontSize: 15, color: '#475569', lineHeight: 1.75 }}>
+              Agentic AI operates through autonomous{' '}
+              <span style={{ color: '#2563eb', fontWeight: 600 }}>AI agents</span>{' '}
+              designed to perform tasks by interpreting context, making decisions, and executing actions aligned with preset objectives. By bridging the gap between static programming and dynamic adaptability, agentic AI enables the automation of complex workflows at scale.
+            </p>
+          </FadeUp>
           <FadeUp delay={0.2}>
-            <div className="rounded-2xl border border-slate-200 bg-white backdrop-blur p-8">
-              <p className="text-xs font-semibold text-cyan-400 tracking-widest uppercase mb-6">Live Agent Network</p>
+            <div className="rounded-2xl border border-slate-200 bg-white backdrop-blur p-8 shadow-sm">
+              <p className="text-xs font-semibold tracking-widest uppercase mb-6">Live Agent Network</p>
               <AgentWorkflowIllustration />
             </div>
           </FadeUp>
@@ -240,105 +247,123 @@ function WhatIsAgenticAI() {
 }
 
 /* ─── SECTION 3: ARCHITECTURE ─── */
-const archLayers = [
-  {
-    id: 'orch', label: 'Orchestration Layer', icon: GitBranch,
-    color: 'from-cyan-400 to-blue-500', glow: 'rgba(34,211,238,0.18)',
-    nodes: ['Goal Decomposition', 'Strategic Planning', 'Agent Coordination', 'Task Dispatcher'],
-  },
-  {
-    id: 'intel', label: 'Intelligence Modules', icon: Brain,
-    color: 'from-blue-400 to-indigo-500', glow: 'rgba(99,102,241,0.18)',
-    nodes: ['Knowledge Extraction', 'Predictive Analytics', 'Natural Language Understanding', 'Decision Optimization'],
-  },
-  {
-    id: 'exec', label: 'Secure Execution', icon: ShieldCheck,
-    color: 'from-violet-400 to-purple-500', glow: 'rgba(167,139,250,0.18)',
-    nodes: ['Policy Enforcement', 'Access Control', 'Sandboxed Runtime', 'Audit Logging'],
-  },
-  {
-    id: 'data', label: 'Data Fabric', icon: Database,
-    color: 'from-emerald-400 to-teal-500', glow: 'rgba(52,211,153,0.18)',
-    nodes: ['Data Lakehouse', 'Vector Database', 'Real-time Streams', 'Knowledge Graph'],
-  },
-  {
-    id: 'cloud', label: 'Cloud Infrastructure', icon: Cloud,
-    color: 'from-orange-400 to-amber-500', glow: 'rgba(251,146,60,0.18)',
-    nodes: ['AWS / Azure / GCP', 'Kubernetes Clusters', 'Compute Resources', 'Global Network'],
-  },
-]
-
-function ArchLayer({ layer, index, activeLayer, onHover }) {
-  const ref = useRef(null)
-  const inView = useInView(ref, { once: true, margin: '0px 0px -60px 0px' })
-  const isActive = activeLayer === layer.id
-
+function OrchestrationDiagram() {
+  const agents = [
+    { label: 'Goal Decomposition Agent', bg: '#ffffff', border: '#e2e8f0', color: '#0f172a' },
+    { label: 'Coordination Agent', bg: '#ffffff', border: '#e2e8f0', color: '#0f172a' },
+    { label: 'Task Dispatcher', bg: '#ffffff', border: '#e2e8f0', color: '#0f172a' },
+  ]
   return (
-    <motion.div
-      ref={ref}
-      initial={{ opacity: 0, x: -30 }}
-      animate={inView ? { opacity: 1, x: 0 } : {}}
-      transition={{ duration: 0.55, delay: index * 0.1, ease: [0.22, 1, 0.36, 1] }}
-      onMouseEnter={() => onHover(layer.id)}
-      onMouseLeave={() => onHover(null)}
-      className="relative cursor-pointer"
-    >
-      <div
-        className={`rounded-2xl border transition-all duration-300 ${isActive ? 'border-slate-300 shadow-xl' : 'border-slate-200'}`}
-        style={{
-          background: isActive
-            ? `linear-gradient(135deg, ${layer.glow} 0%, rgba(250,250,250,0.95) 60%)`
-            : 'rgba(255,255,255,0.8)',
-          boxShadow: isActive ? `0 0 40px ${layer.glow}` : 'none',
-        }}
-      >
-        <div className="p-5">
-          <div className="flex items-center gap-3 mb-4">
-            <div className={`w-8 h-8 rounded-lg bg-gradient-to-br ${layer.color} flex items-center justify-center shadow-lg`}>
-              <layer.icon size={15} className="text-slate-900" />
-            </div>
-            <div>
-              <span className="text-xs font-semibold text-slate-500 uppercase tracking-widest">Layer {index + 1}</span>
-              <h3 className="text-sm font-bold text-slate-900 leading-none mt-0.5">{layer.label}</h3>
-            </div>
-          </div>
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
-            {layer.nodes.map((node) => (
-              <div
-                key={node}
-                className={`rounded-lg border px-3 py-2 text-xs font-medium text-center transition-all duration-200 ${isActive ? 'border-slate-200 bg-slate-100 text-slate-800' : 'border-slate-200 bg-slate-1000 text-slate-600'}`}
-              >
-                {node}
-              </div>
-            ))}
-          </div>
+    <div style={{ marginTop: 28 }}>
+      <div style={{ display: 'flex', alignItems: 'center', gap: 10, marginBottom: 4 }}>
+        <div style={{ width: 32, height: 32, borderRadius: '50%', background: '#e0f2fe', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, fontSize: 14 }}>👤</div>
+        <div style={{ flex: 1, borderRadius: 8, border: '1px dashed #cbd5e1', background: '#f8fafc', padding: '7px 12px', fontSize: 11, color: '#64748b' }}>
+          What's the optimal multi-step plan for this goal?
         </div>
       </div>
-
-      {/* connector line */}
-      {index < archLayers.length - 1 && (
-        <div className="flex justify-center my-1">
-          <div className={`w-px h-5 transition-all duration-300 ${isActive ? 'bg-gradient-to-b from-slate-300/50 to-transparent' : 'bg-slate-200'}`} />
+      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', margin: '4px 0 4px 41px' }}>
+        <div style={{ width: 1, height: 14, background: '#94a3b8' }} />
+        <svg width="10" height="6" viewBox="0 0 10 6"><path d="M5 6L0 0H10Z" fill="#94a3b8" /></svg>
+      </div>
+      <div style={{ marginLeft: 41, borderRadius: 10, border: '1px solid #e2e8f0', background: '#ffffff', padding: '10px 16px', marginBottom: 4 }}>
+        <div style={{ fontSize: 10, fontWeight: 700, color: '#0f172a', letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: 6 }}>Orchestration Layer</div>
+        <div style={{ display: 'flex', gap: 8, alignItems: 'center' }}>
+          <span style={{ borderRadius: 6, background: '#ffffff', border: '1px solid #e2e8f0', padding: '3px 8px', fontSize: 10, color: '#0f172a', fontWeight: 600 }}>Guided</span>
+          <div style={{ flex: 1, height: 4, background: 'linear-gradient(90deg,#3b82f6,#8b5cf6)', borderRadius: 2 }} />
+          <span style={{ borderRadius: 6, background: '#ffffff', border: '1px solid #e2e8f0', padding: '3px 8px', fontSize: 10, color: '#0f172a', fontWeight: 600 }}>Autonomous</span>
         </div>
-      )}
-    </motion.div>
+      </div>
+      <div style={{ marginLeft: 41, display: 'flex', justifyContent: 'space-around', padding: '0 8px' }}>
+        {agents.map((_, i) => (
+          <div key={i} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+            <div style={{ width: 1, height: 12, background: '#94a3b8' }} />
+            <svg width="8" height="5" viewBox="0 0 8 5"><path d="M4 5L0 0H8Z" fill="#94a3b8" /></svg>
+          </div>
+        ))}
+      </div>
+      <div style={{ marginLeft: 41, display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 8, marginBottom: 4 }}>
+        {agents.map(a => (
+          <div key={a.label} style={{ borderRadius: 8, border: `1px solid ${a.border}`, background: a.bg, padding: '8px 10px', textAlign: 'center' }}>
+            <div style={{ fontSize: 10, fontWeight: 700, color: a.color, lineHeight: 1.4 }}>{a.label}</div>
+          </div>
+        ))}
+      </div>
+      <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', margin: '4px 41px' }}>
+        <div style={{ width: 1, height: 12, background: '#94a3b8' }} />
+        <svg width="10" height="6" viewBox="0 0 10 6"><path d="M5 6L0 0H10Z" fill="#94a3b8" /></svg>
+      </div>
+      <div style={{ marginLeft: 41, borderRadius: 10, border: '1px solid #e2e8f0', background: '#f8fafc', padding: '10px 16px', textAlign: 'center' }}>
+        <div style={{ fontSize: 11, fontWeight: 700, color: '#475569', marginBottom: 6 }}>Enterprise Systems</div>
+        <div style={{ display: 'flex', gap: 6, justifyContent: 'center', flexWrap: 'wrap' }}>
+          {['Data APIs', 'Cloud Services', 'Knowledge Base', 'Audit Logs'].map(s => (
+            <span key={s} style={{ borderRadius: 6, border: '1px solid #e2e8f0', background: '#fff', padding: '2px 8px', fontSize: 9, color: '#64748b', fontWeight: 500 }}>{s}</span>
+          ))}
+        </div>
+      </div>
+    </div>
+  )
+}
+
+function PlatformStackDiagram() {
+  const layers = [
+    { label: 'Intelligence Modules', icon: Brain, color: '#0f172a', bg: '#ffffff', border: '#e2e8f0', sub: 'Reasoning · Predictive Analytics · NLU' },
+    { label: 'Secure Execution Layer', icon: ShieldCheck, color: '#0f172a', bg: '#ffffff', border: '#e2e8f0', sub: 'Policy · Access Control · Audit Logging' },
+    { label: 'Data Fabric', icon: Database, color: '#0f172a', bg: '#ffffff', border: '#e2e8f0', sub: 'Lakehouse · Vector DB · Knowledge Graph' },
+    { label: 'Cloud Infrastructure', icon: Cloud, color: '#0f172a', bg: '#ffffff', border: '#e2e8f0', sub: 'AWS · Azure · GCP · Kubernetes' },
+  ]
+  return (
+    <div style={{ marginTop: 28 }}>
+      <div style={{ textAlign: 'center', marginBottom: 4 }}>
+        <div style={{ display: 'inline-block', borderRadius: 8, border: '1px solid #e2e8f0', background: '#ffffff', padding: '8px 20px', fontSize: 12, fontWeight: 700, color: '#0f172a' }}>
+          Orchestration Layer
+        </div>
+      </div>
+      {layers.map((l, i) => (
+        <div key={l.label}>
+          <div style={{ display: 'flex', justifyContent: 'center', flexDirection: 'column', alignItems: 'center', margin: '4px 0' }}>
+            <div style={{ width: 1, height: 12, background: '#cbd5e1' }} />
+            <svg width="10" height="6" viewBox="0 0 10 6"><path d="M5 6L0 0H10Z" fill="#94a3b8" /></svg>
+          </div>
+          <div style={{ borderRadius: 10, border: `1.5px solid ${l.border}`, background: l.bg, padding: '12px 16px', display: 'flex', alignItems: 'center', gap: 12 }}>
+            <div style={{ width: 32, height: 32, borderRadius: 9, background: '#fff', border: `1px solid ${l.border}`, display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0 }}>
+              <l.icon size={15} color={l.color} />
+            </div>
+            <div>
+              <div style={{ fontSize: 12, fontWeight: 700, color: '#0f172a' }}>{l.label}</div>
+              <div style={{ fontSize: 10, color: '#64748b', marginTop: 2 }}>{l.sub}</div>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
   )
 }
 
 function Architecture() {
-  const [activeLayer, setActiveLayer] = useState(null)
   return (
-    <section id="architecture" className="py-28 bg-slate-50">
-      <div className="mx-auto max-w-5xl px-6 lg:px-8">
-        <FadeUp className="text-left mb-16">
-          <p className="text-xs font-semibold text-cyan-400 tracking-widest uppercase mb-3">System Architecture</p>
-          <h2 className="text-4xl font-bold text-slate-900 mb-4">Layered Intelligence Architecture</h2>
-          {/* <p className="text-slate-600 max-w-xl mx-auto text-sm">Hover each layer to explore the components that power SageAlpha's multi-agent infrastructure.</p> */}
+    <section id="architecture" style={{ padding: '80px 0', background: '#f8fafc', width: '100%' }}>
+      <div style={{ width: '100%', padding: '0 40px', boxSizing: 'border-box' }}>
+        <FadeUp>
+          <p style={{ fontSize: 11, fontWeight: 700, color: '#0891b2', letterSpacing: '0.13em', textTransform: 'uppercase', marginBottom: 10 }}>System Architecture</p>
+          <h2 style={{ fontSize: 'clamp(1.8rem, 3vw, 2.4rem)', fontWeight: 800, color: '#0f172a', marginBottom: 40 }}>Layered Intelligence Architecture</h2>
         </FadeUp>
-        <div className="space-y-1">
-          {archLayers.map((layer, i) => (
-            <ArchLayer key={layer.id} layer={layer} index={i} activeLayer={activeLayer} onHover={setActiveLayer} />
-          ))}
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 24 }}>
+          <FadeUp delay={0.08}>
+            <div style={{ borderRadius: 18, border: '1px solid #e2e8f0', background: '#ffffff', padding: '32px', boxShadow: '0 2px 12px rgba(0,0,0,0.05)', height: '100%', boxSizing: 'border-box' }}>
+              <h3 style={{ fontSize: 18, fontWeight: 700, color: '#0f172a', marginBottom: 10 }}>Multi-Agent Orchestration</h3>
+              <p style={{ fontSize: 13, color: '#64748b', lineHeight: 1.7 }}>
+                Orchestrate multiple AI agents to collaborate with each other. From simple activities with a single AI agent, through complex workflows with multiple specialized AI agents, while maintaining control and compliance.              </p>
+              <OrchestrationDiagram />
+            </div>
+          </FadeUp>
+          <FadeUp delay={0.16}>
+            <div style={{ borderRadius: 18, border: '1px solid #e2e8f0', background: '#ffffff', padding: '32px', boxShadow: '0 2px 12px rgba(0,0,0,0.05)', height: '100%', boxSizing: 'border-box' }}>
+              <h3 style={{ fontSize: 18, fontWeight: 700, color: '#0f172a', marginBottom: 10 }}>Secure Intelligence Platform</h3>
+              <p style={{ fontSize: 13, color: '#64748b', lineHeight: 1.7 }}>
+                A full-stack enterprise AI platform combining intelligence, security, and data capabilities, ensuring performance at scale with complete auditability, policy enforcement, and enterprise reliability. to get it from them              </p>
+              <PlatformStackDiagram />
+            </div>
+          </FadeUp>
         </div>
       </div>
     </section>
@@ -479,28 +504,20 @@ function ConfidenceDashboard() {
 /* ─── SECTION 5: INDUSTRY SOLUTIONS ─── */
 const industrySolutions = [
   {
-    icon: BarChart2, label: 'Finance',
-    color: 'from-cyan-500 to-blue-600', glow: 'rgba(34,211,238,0.12)',
-    desc: 'Autonomous agents for fraud detection, risk scoring, portfolio optimization, and regulatory reporting.',
-    tags: ['Risk Analysis', 'Compliance', 'Trading Bots'],
+    image: '/agentic-ai-industires/finance.jpg', label: 'Finance',
+    desc: 'Fraud detection and risk scoring automation.',
   },
   {
-    icon: ShieldCheck, label: 'Cybersecurity',
-    color: 'from-violet-500 to-purple-600', glow: 'rgba(167,139,250,0.12)',
-    desc: 'Threat intelligence agents that monitor, correlate, and respond to incidents in real-time without human intervention.',
-    tags: ['Threat Detection', 'SOC Automation', 'Incident Response'],
+    image: '/agentic-ai-industires/cybersecurity.jpg', label: 'Cybersecurity',
+    desc: 'Real-time threat intelligence and response.',
   },
   {
-    icon: HeadphonesIcon, label: 'Customer Service',
-    color: 'from-emerald-500 to-teal-600', glow: 'rgba(52,211,153,0.12)',
-    desc: 'Multi-turn conversational agents that resolve complex queries, escalate intelligently, and learn from every interaction.',
-    tags: ['Support Agents', 'Sentiment Analysis', 'Auto-Escalation'],
+    image: '/agentic-ai-industires/customer-service.avif', label: 'Customer Service',
+    desc: 'Conversational agents resolving complex queries.',
   },
   {
-    icon: Code2, label: 'Software Engineering',
-    color: 'from-orange-500 to-amber-600', glow: 'rgba(251,146,60,0.12)',
-    desc: 'Code generation, test writing, bug triage, and PR review agents that integrate into existing CI/CD pipelines.',
-    tags: ['Code Generation', 'Auto-Testing', 'PR Review'],
+    image: '/agentic-ai-industires/software.jpg', label: 'Software Engineering',
+    desc: 'Automated code generation and PR reviews.',
   },
 ]
 
@@ -511,29 +528,18 @@ function IndustrySolutionCard({ sol, i }) {
       <div
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
-        className="relative h-full rounded-2xl border border-slate-200 bg-slate-1000 backdrop-blur overflow-hidden cursor-default transition-all duration-300"
-        style={{
-          boxShadow: hovered ? `0 0 40px ${sol.glow}` : 'none',
-          borderColor: hovered ? 'rgba(0,0,0,0.15)' : undefined,
-        }}
+        className="group relative h-full rounded-2xl border border-slate-200 bg-white overflow-hidden cursor-pointer transition-all duration-300 shadow-sm hover:shadow-xl hover:-translate-y-1 flex flex-col"
       >
-        <div
-          className="absolute inset-0 opacity-0 transition-opacity duration-300"
-          style={{ opacity: hovered ? 1 : 0, background: `radial-gradient(ellipse at top left, ${sol.glow}, transparent 70%)` }}
-        />
-        <div className="relative z-10 p-7 flex flex-col gap-5 h-full">
-          <div className={`w-12 h-12 rounded-2xl bg-gradient-to-br ${sol.color} flex items-center justify-center shadow-lg transition-transform duration-300 ${hovered ? 'scale-110' : ''}`}>
-            <sol.icon size={22} className="text-slate-900" />
-          </div>
-          <div>
-            <h3 className="text-lg font-bold text-slate-900 mb-2">{sol.label}</h3>
-            <p className="text-sm text-slate-600 leading-relaxed">{sol.desc}</p>
-          </div>
-          <div className="flex flex-wrap gap-2 mt-auto">
-            {sol.tags.map((t) => (
-              <span key={t} className="rounded-full border border-slate-200 bg-slate-100 px-3 py-0.5 text-xs text-slate-600">{t}</span>
-            ))}
-          </div>
+        <div className="relative h-48 w-full overflow-hidden bg-slate-100 shrink-0">
+          <img
+            src={sol.image}
+            alt={sol.label}
+            className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+          />
+        </div>
+        <div className="p-6 flex flex-col flex-1 bg-white">
+          <h3 className="text-xl font-bold text-slate-900 tracking-tight mb-2">{sol.label}</h3>
+          <p className="text-sm text-slate-600 leading-relaxed">{sol.desc}</p>
         </div>
       </div>
     </FadeUp>
@@ -542,7 +548,7 @@ function IndustrySolutionCard({ sol, i }) {
 
 function IndustrySolutions() {
   return (
-    <section className="py-28 bg-slate-50">
+    <section className="py-28 bg-white">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <FadeUp className="mb-14">
           <p className="text-xs font-semibold text-cyan-400 tracking-widest uppercase mb-3">Domain Solutions</p>
@@ -595,15 +601,26 @@ function WhySageAlpha() {
 /* ─── SECTION 7: CTA ─── */
 function EnterprriseCTA() {
   return (
-    <section id="contact" className="py-28 bg-slate-50 relative overflow-hidden">
-      <div className="absolute inset-0" style={{ background: 'radial-gradient(ellipse 70% 60% at 50% 50%, rgba(219,234,254,0.6) 0%, transparent 70%)' }} />
+    <section
+      id="contact"
+      className="py-28 bg-slate-50 relative overflow-hidden"
+    >
+      <div
+        className="absolute inset-0"
+        style={{
+          background:
+            "radial-gradient(ellipse 70% 60% at 50% 50%, rgba(219,234,254,0.6) 0%, transparent 70%)",
+        }}
+      />
       <div className="relative z-10 mx-auto max-w-3xl px-6 text-center">
         <FadeUp>
           <div className="inline-flex items-center gap-2 rounded-full border border-cyan-500/30 bg-cyan-500/10 px-4 py-1.5 text-xs font-semibold text-cyan-400 tracking-widest uppercase mb-8">
             Enterprise Ready
           </div>
           <h2 className="text-4xl sm:text-5xl font-extrabold text-slate-900 leading-tight mb-5">
-            Deploy Agentic AI Systems<br />for Your Enterprise
+            Deploy Agentic AI Systems
+            <br />
+            for Your Enterprise
           </h2>
           {/* <p className="text-slate-600 text-base mb-10 max-w-xl mx-auto">
             Start with a discovery session. Our architects will design a multi-agent architecture tailored to your organization's goals and constraints.
@@ -614,7 +631,10 @@ function EnterprriseCTA() {
               className="group inline-flex items-center gap-2 rounded-xl bg-gradient-to-r from-cyan-500 to-blue-600 px-8 py-3.5 text-sm font-semibold text-white shadow-lg shadow-blue-200 transition-all hover:shadow-blue-300 hover:scale-105"
             >
               Launch Demo
-              <ChevronRight size={16} className="transition-transform group-hover:translate-x-1" />
+              <ChevronRight
+                size={16}
+                className="transition-transform group-hover:translate-x-1"
+              />
             </a>
             <a
               href="mailto:hello@sagealpha.in"
@@ -626,15 +646,15 @@ function EnterprriseCTA() {
         </FadeUp>
       </div>
     </section>
-  )
+  );
 }
 
 /* ─── PAGE ASSEMBLY ─── */
 export default function AgenticAI() {
   useEffect(() => {
-    window.scrollTo({ top: 0 })
-    document.title = 'Agentic AI Solutions — SageAlpha'
-  }, [])
+    window.scrollTo({ top: 0 });
+    document.title = "Agentic AI Solutions — SageAlpha";
+  }, []);
 
   return (
     <div className="bg-slate-50 text-slate-700">
@@ -646,5 +666,6 @@ export default function AgenticAI() {
       <WhySageAlpha />
       <EnterprriseCTA />
     </div>
-  )
+  );
 }
+
